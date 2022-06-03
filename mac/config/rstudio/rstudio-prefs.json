@@ -1,0 +1,40 @@
+{
+    "panes": {
+        "quadrants": [
+            "Source",
+            "Console",
+            "TabSet1",
+            "TabSet2"
+        ],
+        "tabSet1": [
+            "Environment",
+            "History",
+            "Connections",
+            "Build",
+            "VCS",
+            "Presentation"
+        ],
+        "tabSet2": [
+            "Files",
+            "Plots",
+            "Packages",
+            "Help",
+            "Viewer"
+        ],
+        "console_left_on_top": false,
+        "console_right_on_top": true
+    },
+    "num_spaces_for_tab": 4,
+    "auto_detect_indentation": true,
+    "show_margin": false,
+    "show_diagnostics_other": true,
+    "font_size_points": 14,
+    "editor_theme": "Tomorrow Night Bright",
+    "default_project_location": "~",
+    "default_sweave_engine": "knitr",
+    "pdf_previewer": "system",
+    "document_author": "Deshawn Sambrano",
+    "wrap_tab_navigation": false,
+    "reuse_sessions_for_project_links": true,
+    "jobs_tab_visibility": "shown"
+}
