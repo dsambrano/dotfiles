@@ -49,10 +49,15 @@ defaults write com.apple.Finder _FXSortFoldersFirst -bool true # folders on top 
 defaults write com.apple.Finder _FXShowPosixPathInTitle -bool true # show POSIX path
 defaults write com.apple.Finder WarnOnEmptyTrash -bool false # disable the warning before emptying the Trash
 # osascript -e 'tell application "Finder" to set desktop picture to POSIX file "<path/to/image>"' # set background image
+defaults write com.apple.finder FXDefaultSearchScope -string "SCcf" # When performing a search, search the current folder by default
+defaults write com.apple.finder FXEnableExtensionChangeWarning -bool false # Disable the warning when changing a file extension
+
+
 
 # Menu config
 defaults write com.apple.menuextra.clock "DateFormat" -string "\"EEE MMM d  h:mm:ss a\""  # https://macos-defaults.com/#🙋-what-s-a-defaults-command
 defaults write -g AppleInterfaceStyle Dark # https://apple.stackexchange.com/questions/391686/how-to-set-dark-mode-appearance-to-auto-in-terminal
+defaults write -g AppleHighlightColor "0.847059 0.847059 0.862745 Graphite" # Setting my highlight color
 
 # Set Mouse/Trackpad Speed
 defaults write -g com.apple.trackpad.scaling -float 3.0
