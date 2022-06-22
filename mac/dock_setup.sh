@@ -36,6 +36,11 @@ git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-m
 
 
 ## Defaults config see (https://lupin3000.github.io/macOS/defaults/) for additional options
+## More info about defaults can be found here:
+## - https://eclecticlight.co/2017/11/09/customising-it-all-global-defaults-in-macos-sierra-and-high-sierra/
+## - https://www.shell-tips.com/mac/defaults/
+## - https://wilsonmar.github.io/dotfiles/
+## - https://github.com/mathiasbynens/dotfiles/blob/master/.macos
 # Dock Config
 defaults write com.apple.dock orientation left # Place on left
 defaults write com.apple.dock "autohide" -bool "true" # Auto hide
