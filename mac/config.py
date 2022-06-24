@@ -1,16 +1,9 @@
 #! /usr/bin/env python
 
-import json
+from .. import utils
+import os
 FONT = 'MesloLGS NF'
-FILENAME = 'settings.json'
-VS_FONT_SETTING = 'terminal.integrated.fontFamily' VS_FONT_SETTING
+FILENAME = os.path.join('~','Library','Application Support','Code','User', 'settings.json')
+VS_FONT_SETTING = 'terminal.integrated.fontFamily'
 
-with open(FILENAME, 'r') as f:
-    content = f.read()
-data = json.loads(content)
-font_family = data.get(VS_FONT_SETTING)
-if not font_family == FONT:
-    data.update({VS_FONT_SETTING: FONT})
-
-with open(FILENAME, 'w', encoding='utf-8') as f:
-    json.dump(data, f, ensure_ascii=False, indent=4)
+utils.update_vscode_font(FILENAME, VS_FONT_SETTING, FONT)
