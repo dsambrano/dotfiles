@@ -3,6 +3,8 @@
 set -e
 
 # Setup sample: https://sourabhbajaj.com/mac-setup/
+read -p "User Name for Git" GITUNAME
+read -p "Email for User Name" GITEMAIL
 
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 sudo xcode-select --install
@@ -10,16 +12,17 @@ sudo xcode-select --install
 brew install git gh bat neofetch python fzf htop cmatrix xclip node ffmpeg duti lf nmap netcat docker docker-compose docker-machine trash-cli autojump tldr thefuck espeak tmux ranger
 brew install --cask r rstudio amethyst mpv visual-studio-code sublime-text iterm2 firefox brave-browser xquartz docker virtualbox zoom slack spotify anaconda onlyoffice edex-ui itsycal insomnia aerial
 
-git config --global user.name 'Deshawn Sambrano'
-git config --global user.email ''
+git config --global user.name $GITUNAME
+git config --global user.email $GITEMAIL
 
 # Add to Path
+## Adding to path permenantly
 cat << EOF >> ~/.zprofile
 # Add Visual Studio Code (code)
 export PATH="\$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
 EOF
 
-export PATH="\$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
+export PATH="\$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin" # Added to path to be used immmediately
 
 # Aliases
 cp config/.aliases ~/.aliases
