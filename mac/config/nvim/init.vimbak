@@ -1,0 +1,36 @@
+set runtimepath^=~/.vim runtimepath+=~/.vim/after
+let &packpath = &runtimepath
+source ~/.vimrc
+
+""" Plugins
+
+call plug#begin()
+
+Plug 'nvim-treesitter/nvim-treesitter', { 'do': ':TSUpdate' }
+Plug 'ThePrimeagen/vim-be-good'
+Plug 'kyazdani42/nvim-tree.lua'
+
+" Functionality
+Plug 'mhinz/vim-signify'
+
+
+" Aesthetics - Colorschemes
+Plug 'dracula/vim', { 'as': 'dracula' }
+
+call plug#end()
+
+
+" Import Files
+lua << EOF
+
+require('nvim-tree-config')
+
+EOF
+
+
+""" Colors
+color dracula
+
+
+""" KeyBinds
+nmap <leader>q :NvimTreeFindFileToggle<CR>
