@@ -9,7 +9,7 @@ read -p "Email for User Name" GITEMAIL
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 sudo xcode-select --install
 
-brew install git gh bat neofetch python fzf htop cmatrix xclip node ffmpeg duti lf nmap netcat docker docker-compose docker-machine trash-cli autojump tldr thefuck espeak tmux ranger
+brew install git gh bat neofetch python fzf htop cmatrix xclip node ffmpeg duti lf nmap netcat docker docker-compose docker-machine trash-cli autojump tldr thefuck espeak tmux ranger 
 brew install --cask r rstudio amethyst mpv visual-studio-code sublime-text iterm2 firefox brave-browser xquartz docker virtualbox zoom slack spotify anaconda onlyoffice edex-ui itsycal insomnia
 
 git config --global user.name $GITUNAME
@@ -54,6 +54,8 @@ done
 
 
 # Anime from Terminal
+## Installing Dependencies 
+brew install aria2
 curl "https://raw.githubusercontent.com/whoisYoges/anime-terminal/master/anime-terminal" > anime-terminal
 chmod +x anime-terminal
 sudo mv anime-terminal /usr/local/bin/
