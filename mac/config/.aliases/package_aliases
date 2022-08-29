@@ -1,0 +1,4 @@
+alias search="brew search "
+alias install="brew install "
+alias update="brew update"
+alias upgrade="brew upgrade"
