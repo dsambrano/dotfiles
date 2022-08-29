@@ -27,6 +27,7 @@ export PATH="\$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/
 # Aliases
 cp config/.aliases ~/.aliases
 echo ". ~/.aliases" >> ~/.zshrc # https://superuser.com/a/331766
+# Need to also add package_aliases I believe if I have that start with a `.` I can make a single `cp` line
 
 # Install oh-my-zsh
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
@@ -60,3 +61,6 @@ brew install aria2
 curl "https://raw.githubusercontent.com/whoisYoges/anime-terminal/master/anime-terminal" > anime-terminal
 chmod +x anime-terminal
 sudo mv anime-terminal /usr/local/bin/
+## Adding Man Pages
+curl "https://raw.githubusercontent.com/whoisYoges/anime-terminal/master/anime-terminal.1" > anime-terminal.1
+sudo mv anime-terminal.1 /usr/share/man/man1/
