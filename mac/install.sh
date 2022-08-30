@@ -41,7 +41,7 @@ cp -r config/nvim ~/.config/nvim
 ## Really need to make this an if statement and symbolically link for me but not others
 
 # Setup local bin folder
-mkdir - p $HOME/.config/local/bin
+mkdir -p $HOME/.config/local/bin
 
 duti -s $(osascript -e 'id of app "Visual Studio Code"') .md all # found from https://superuser.com/a/1092184 in comments
 
