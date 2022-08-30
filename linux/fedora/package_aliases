@@ -2,4 +2,4 @@ alias search="dnf search "
 alias install="dnf install "
 alias update="dnf update"
 alias upgrade="dnf upgrade"
-alias open="gnome-open"
+alias open="gnome-open" # Kde has kd-open: https://askubuntu.com/a/464561
