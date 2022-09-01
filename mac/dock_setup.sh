@@ -103,6 +103,18 @@ defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad TrackpadTwoFin
 defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad TrackpadTwoFingerFromRightEdgeSwipeGesture = 3;
 defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad USBMouseStopsTrackpad -bool false
 
+# Keybinds
+## More infor here:
+### - https://apple.stackexchange.com/a/66971
+### - https://apple.stackexchange.com/a/36612
+mkdir -p ~/Library/Keybindings/
+echo """
+ {
+    "^x" = cut:;
+    "^c" = copy:;
+    "^v" = paste:;
+}
+""" >> ~/Library/Keybindings/DefaultKeybinding.dict
 
 # Generic Settings
 ## Save screenshots in lossless PNG format
