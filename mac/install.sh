@@ -25,8 +25,10 @@ EOF
 export PATH="\$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin" # Added to path to be used immmediately
 
 # Aliases
-cp config/.aliases ~/.aliases
-echo ". ~/.aliases" >> ~/.zshrc # https://superuser.com/a/331766
+cp -r config/.aliases ~/
+echo "source ~/.aliases/aliases" >> ~/.zshrc # https://superuser.com/a/331766
+echo "source ~/.aliases/package_aliases" >> ~/.zshrc
+# Need to also add package_aliases I believe if I have that start with a `.` I can make a single `cp` line
 
 # Install oh-my-zsh
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
@@ -39,7 +41,7 @@ cp -r config/nvim ~/.config/nvim
 ## Really need to make this an if statement and symbolically link for me but not others
 
 # Setup local bin folder
-mkdir - p $HOME/.config/local/bin
+mkdir -p $HOME/.config/local/bin
 
 duti -s $(osascript -e 'id of app "Visual Studio Code"') .md all # found from https://superuser.com/a/1092184 in comments
 
@@ -52,6 +54,7 @@ for i in {Regular,Bold,Italic,"Bold Italic"}; do
 	install_fonts "https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS NF ${i}.ttf"
 done
 
+gh auth login
 
 # Anime from Terminal
 ## Installing Dependencies 
@@ -59,3 +62,6 @@ brew install aria2
 curl "https://raw.githubusercontent.com/whoisYoges/anime-terminal/master/anime-terminal" > anime-terminal
 chmod +x anime-terminal
 sudo mv anime-terminal /usr/local/bin/
+## Adding Man Pages
+curl "https://raw.githubusercontent.com/whoisYoges/anime-terminal/master/anime-terminal.1" > anime-terminal.1
+sudo mv anime-terminal.1 /usr/share/man/man1/
