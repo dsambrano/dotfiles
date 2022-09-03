@@ -14,6 +14,7 @@ brew install --cask r rstudio amethyst mpv visual-studio-code sublime-text iterm
 
 git config --global user.name $GITUNAME
 git config --global user.email $GITEMAIL
+git config --global pull.rebase true # false for merge
 
 # Add to Path
 ## Adding to path permenantly
