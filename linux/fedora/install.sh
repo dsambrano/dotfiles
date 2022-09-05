@@ -95,6 +95,12 @@ done
 ## Update fonts cache
 fc-cache -v
 
+# NVIM configs
+sudo dnf install -y libstdc++ g++ # https://github.com/nvim-treesitter/nvim-treesitter/issues/626#issuecomment-831972947
+## need to move Plugin files only here
+nvim +PlugInstall +qall # Installing all Plugins
+## need to move the rest of the files now: This will prevent the error for theming before installed
+
 # Switch Default Shell to ZSH
 sudo dnf install util-linux-user  util-linux
 chsh -s $(which zsh)
@@ -123,7 +129,7 @@ LOCATION=$( curl -s "https://api.github.com/repos/GoXLR-on-Linux/goxlr-utility/r
 	| grep "browser_download_url.*.rpm" \
 	| head -1 \
 	| sed 's/.* //' \
-	| cut -d '"' -f 2) # Removes Double Quotes
+	| cut -d '"' -f 2) # Removes Double Quotes: https://stackoverflow.com/a/35636517
 wget $LOCATION
 sudo rpm -i goxlr*rpm # Source: https://phoenixnap.com/kb/how-to-install-rpm-file-centos-linux https://www.cyberciti.biz/faq/rhel-redhat-fedora-opensuse-linux-install-rpmfile-command/
 sudo dnf install goxlr-utility
