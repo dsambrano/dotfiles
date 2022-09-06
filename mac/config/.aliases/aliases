@@ -45,3 +45,4 @@ alias md="mkdir -p"
 alias mkdir="mkdir -p"
 alias rd="rmdir"
 alias vim="nvim"
+alias vimbegood="docker run -it --rm brandoncc/vim-be-good:latest" # https://github.com/ThePrimeagen/vim-be-good
