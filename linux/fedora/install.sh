@@ -162,3 +162,4 @@ flatpak install flathub net.davidotek.pupgui2 # net.lutris.Lutris com.heroicgame
 # Smash Box: make sure to uncheck all checkboxes in the installer.
 winetricks prefix=hit_box ./smash_box_designer.verb
 ### Jak and Daxter: https://www.youtube.com/watch?v=p8I9NfuZOgE
+sudo dnf install antimicrox # For Smashbox (https://github.com/AntiMicroX/antimicrox#installation) also see https://discordapp.com/channels/297604571704983572/297604571704983572/1016756522610602014
