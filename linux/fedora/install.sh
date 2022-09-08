@@ -101,6 +101,10 @@ sudo dnf install -y libstdc++ g++ # https://github.com/nvim-treesitter/nvim-tree
 nvim +PlugInstall +qall # Installing all Plugins
 ## need to move the rest of the files now: This will prevent the error for theming before installed
 
+# Install Onefetch: https://github.com/o2sh/onefetch
+sudo dnf copr enable varlad/onefetch -y
+sudo dnf install onefetch -y
+
 # Switch Default Shell to ZSH
 sudo dnf install util-linux-user  util-linux
 chsh -s $(which zsh)
