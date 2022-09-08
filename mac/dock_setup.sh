@@ -154,7 +154,9 @@ killall Dock; killall Finder
 # Set Start Up Apps
 osascript -e 'tell application "iTerm" to open the startup disk'
 
-
+# iTerm setup
+## Need to also move either the profile in if not just move the full plist
+defaults write com.googlecode.iterm2 StatusBarPosition -int 1
 
 
 
