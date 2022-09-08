@@ -8,3 +8,4 @@
 -[] Follow Steps 1 and 3 for install/setup scripts
 -[] Update (`install.sh`) Aliases commands to include the new package manager specific aliases
 -[] Update `dock_setup.sh` to include the new sed commands to manage the .zshrc file. Alternatively, I can just store the `.zshrc` file in the git repo. Should be possible but need to confirm that it is viable to have it consistent across screen sizes. I think it is fine so long as I have different `powerlevel10k` THEME files. But just need to compare with both work computer and laptop.
+-[] Need to diff the init.vim with local and repo to see what changes to makge and the of course sym link everything properly
