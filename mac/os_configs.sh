@@ -30,14 +30,6 @@ printf '%s\n' ' done.'
 sudo systemsetup -setremotelogin on
 # sudo launchctl load -w /System/Library/LaunchDaemons/ssh.plist # not sure if I need both
 
-# Iterm2 updates don't forget to update the ~/.zshrc to include each of the folloing as plugins:
-git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k # ZSH_THEME="powerlevel10k/powerlevel10k"
-git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions # plugins=( git zsh-autosuggestions )
-# Use sed to recreate the file but change the appropriate options to match above. It stores a backup copy but can be remove manually or by replacing -i.bak with -i '' for no backup. https://stackoverflow.com/a/5171935
-sed -i.bak 's/^plugins=(.*).*$/plugins=(git zsh-autosuggestions)/' ~/.zshrc
-sed -i.bak 's,^ZSH_THEME="robbyrussell".*$,ZSH_THEME="powerlevel10k/powerlevel10k",' ~/.zshrc
-# Another needs to be added with this: HIST_STAMPS="mm/dd/yyyy"
-# Need more seds with # ENABLE_CORRECTION="true" and # COMPLETION_WAITING_DOTS="true"
 
 ## Defaults config see (https://lupin3000.github.io/macOS/defaults/) for additional options
 ## More info about defaults can be found here:
@@ -164,9 +156,14 @@ osascript -e 'tell application "System Events" to make login item at end with pr
 osascript -e 'tell application "System Events" to make login item at end with properties {path: "/Applications/Itsycal.app", hidden:false}'
 
 
+# Add to Path
+## Adding to path permenantly
+cat << EOF >> ~/.zprofile
+# Add Visual Studio Code (code)
+export PATH="\$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
+EOF
+
+export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin" # Added to path to be used immediately
 
 
-# End script and restart 
-read -t 30 -p "The configs are complete. Although some will not be updated until the next reboot. Would you like to reboot now? [Y]/N" restart
-restart=${restart:-N} # If parameter is unset or null, the expansion of word is substituted. Else whatever was read in
-
+duti -s $(osascript -e 'id of app "Visual Studio Code"') .md all # found from https://superuser.com/a/1092184 in comments
