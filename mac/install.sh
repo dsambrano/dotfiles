@@ -64,6 +64,21 @@ for i in $repos; do
     git clone git@github.com:dsambrano/$i.git
 done
 
+
+## Set up basic SSH template
+mkdir -p ~/.ssh
+echo """Host *
+    IgnoreUnknown UseKeychain
+    UseKeychain yes
+    AddKeysToAgent yes
+
+Host template
+    Hostname 192.168.1.69
+    Port 69420
+    IdentityFile ~/.ssh/id_rsa
+
+""" >> ~/.ssh/config
+
 # Anime from Terminal
 ## Installing Dependencies 
 brew install aria2
