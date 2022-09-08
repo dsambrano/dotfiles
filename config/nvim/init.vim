@@ -86,9 +86,10 @@ autocmd FileType htmldjango inoremap {{ {{  }}<left><left><left>
 autocmd FileType htmldjango inoremap {% {%  %}<left><left><left>
 autocmd FileType htmldjango inoremap {# {#  #}<left><left><left>
 
-" Markdown and Journal
+" Markdown, Journal, and JS 
 autocmd FileType markdown setlocal shiftwidth=2 tabstop=2 softtabstop=2
 autocmd FileType journal setlocal shiftwidth=2 tabstop=2 softtabstop=2
+autocmd FileType javascript setlocal shiftwidth=2 tabstop=2 softtabstop=2
 
 """ Coloring
 
@@ -103,6 +104,9 @@ endfunction
 
 " Use these colors for Pmenu, CmpPmenusBorder and TelescopeBorder when using dracula colorscheme
 function! DraculaTweaks()
+    " Change background color for a little more contrast (Alt color:
+    " #151218 #121318)
+    highlight Normal guibg=#121318
     " Pmenu colors when not using bordered windows
     highlight Pmenu guibg=#363948
     highlight PmenuSbar guibg=#363948
