@@ -11,7 +11,7 @@ set -e
 # Setup sample: https://sourabhbajaj.com/mac-setup/
 read -p "User Name for Git: " GITUNAME
 read -p "Email for User Name: " GITEMAIL
-read -p "What OS are you using? [Mac/Ubuntu/Fedora]" OS
+read -p "What OS are you using? [Mac/Ubuntu/Fedora] " OS
 # Obviously need to make it so they cant set incorret OS. 
 # Also should make it download the folder once you select the OS probs. 
 if [ $OS  == "Mac" ]; then
@@ -28,11 +28,11 @@ fi
 
 
 # Install all the packages for the OS
-/bin/bash ./$OS_DIR/package_install.sh
+source ./$OS_DIR/package_install.sh
 
 # Now Set up all the configs. First the general then the specific, to overwrite if necessary. 
-/bin/bash ./configs.sh
-/bin/bash ./$OS_DIR/os_configs.sh
+source ./configs.sh
+source ./$OS_DIR/os_configs.sh
 
 # Authorize GitHub
 gh auth login
@@ -47,14 +47,14 @@ done
 cd -
 
 # Sym links require the clone of the main repo first to work. 
-/bin/bash ./symlinks.sh	
+source ./symlinks.sh	
 
 
 ## Conditionals. This is where I would set up things like the GoXLR and smashbox/gaming setup etc
 read -p "Would you like to install Anime-Terminal to download/stream anime with CLI: [Y/n] ? " anime
 restart=${restart:-N}
 if [ $anime == "Y" ]; then
-    /bin/bash ./conditional_installs/anime.sh
+    source ./conditional_installs/anime.sh
 fi
 
 # End script and restart 

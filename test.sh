@@ -9,9 +9,9 @@ set -e
 ### - Do you want to Sym links to keep all the files up to date?
 ### - Do you want to download the GH repos that I keep for default?
 # Setup sample: https://sourabhbajaj.com/mac-setup/
-read -p "User Name for Git: " GITUNAME
-read -p "Email for User Name: " GITEMAIL
-read -p "What OS are you using? [Mac/Ubuntu/Fedora]" OS
+GITUNAME="Deshawn Sambrano"
+GITEMAIL="3dbrano3@gmail.com"
+OS=Mac
 # Obviously need to make it so they cant set incorret OS. 
 # Also should make it download the folder once you select the OS probs. 
 if [ $OS  == "Mac" ]; then
@@ -30,4 +30,4 @@ fi
 
 # Now Set up all the configs. First the general then the specific, to overwrite if necessary. 
 ##/bin/bash ./configs.sh
-/bin/bash ./$OS_DIR/os_configs.sh
+source ./$OS_DIR/os_configs.sh
