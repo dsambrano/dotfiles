@@ -18,11 +18,13 @@ __dock_item() {
 printf '%s' 'Setting up Dock icons...'
 defaults write com.apple.dock \
                persistent-apps -array "$(__dock_item /Applications/iTerm.app)" \
-				      "$(__dock_item /Application/Brave\ Browser.app)" \
-				      "$(__dock_item /Application/Docker.app)" \
-                                      "$(__dock_item /Application/RStudio.app)" \ 
-				      "$(__dock_item /Application/Slack.app)" \
-                                      "$(__dock_item /System/Applications/Utilities/Messages.app)" \ 
+				      "$(__dock_item /Applications/Brave\ Browser.app)" \
+				      "$(__dock_item /Applications/Docker.app)" \
+                      "$(__dock_item /Applications/RStudio.app)" \
+				      "$(__dock_item /Applications/Slack.app)" \
+                                      "$(__dock_item /System/Applications/Messages.app)" \
+				      "$(__dock_item /Applications/Insomnia.app)" \
+				      "$(__dock_item /Applications/Spotify.app)" \
 
 printf '%s\n' ' done.'
 
@@ -30,6 +32,8 @@ printf '%s\n' ' done.'
 sudo systemsetup -setremotelogin on
 # sudo launchctl load -w /System/Library/LaunchDaemons/ssh.plist # not sure if I need both
 
+# Should look into setting this programmatically: https://apple.stackexchange.com/a/362615
+## Lets you use CRTL # to switch desktops
 
 ## Defaults config see (https://lupin3000.github.io/macOS/defaults/) for additional options
 ## More info about defaults can be found here:
@@ -106,14 +110,14 @@ defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad USBMouseStopsT
 ## More infor here:
 ### - https://apple.stackexchange.com/a/66971
 ### - https://apple.stackexchange.com/a/36612
-mkdir -p ~/Library/Keybindings/
-echo """
- {
-    "^x" = cut:;
-    "^c" = copy:;
-    "^v" = paste:;
-}
-""" >> ~/Library/Keybindings/DefaultKeybinding.dict
+##mkdir -p ~/Library/Keybindings/
+##echo """
+## {
+##    "^x" = cut:;
+##    "^c" = copy:;
+##    "^v" = paste:;
+##}
+##""" >> ~/Library/Keybindings/DefaultKeybinding.dict
 
 # Generic Settings
 ## Save screenshots in lossless PNG format
@@ -131,17 +135,17 @@ defaults write com.apple.screensaver askForPasswordDelay -int 0
 
 ## Fancy screen saver like apple tv. Combines with Aerial from brew install
 ## Got settings from: defaults -currentHost write com.apple.screensaver https://apple.stackexchange.com/a/283374
-defaults -currentHost write com.apple.screensaver "{
-    CleanExit = YES;
-    PrefsVersion = 100;
-    idleTime = 600;
-    moduleDict =     {
-        moduleName = Aerial;
-        path = \"${HOME}/Library/Screen Savers/Aerial.saver\";
-        type = 0;
-    };
-    showClock = 0;
-}"
+##defaults -currentHost write com.apple.screensaver "
+##    CleanExit = YES;
+##    PrefsVersion = 100;
+##    idleTime = 600;
+##    moduleDict =     {
+##        moduleName = Aerial;
+##        path = \"${HOME}/Library/Screen Savers/Aerial.saver\";
+##        type = 0;
+##    };
+##    showClock = 0;
+##}"
 
 
 
