@@ -25,3 +25,4 @@
     - this is where you set up all the things that that require and if statement. E.g., are the gaming things going to be setup. or for Ubuntu is the GUI or just the CLI stuff loaded etc. TBF if ubuntu its literally alwasy just the CLI. I pretty much will never have a DE on ubuntu. So perhaps a better option is gaming/smashbox/GoXLR. 
   - Symlinks: MPV, Rstudio
   - Using the python script to fix VScode's font
+  - Need to add `eval "$(zoxide init zsh)"` to the `.zshrc`
