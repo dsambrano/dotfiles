@@ -32,7 +32,28 @@ sudo dnf install -y \
     gnome-open libgnome \
     qpwgraph \
     dconf \
-    wine winetricks
+    wine winetricks \
+    lsd \
+    duf \
+    zoxide \
+    fd-find \
+    cargo \
+
+# Need to add to path for zoxide:
+eval "$(zoxide init zsh)"
+# Consider adding this to my nvim config: https://github.com/nanotee/zoxide.vim
+
+# Installing from copr
+sudo dnf copr enable atim/bottom -y
+sudo dnf install bottom -y
+sudo dnf copr enable atim/gping -y && sudo dnf install gping -y
+
+# Installing from npm
+sudo npm install gtop -g
+
+# Installing from cargo
+cargo install du-dust
+export PATH="$HOME/.cargo/bin:$PATH"
 
 # Exports 
 export EDITOR=/usr/bin/nvim
