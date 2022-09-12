@@ -33,3 +33,4 @@ cd ~/.tmux/plugins/tpm/bin/
 source ~/.tmux/plugins/tpm/bin/install_plugins
 cd -
 
+# If I want to add lsd configs: they go here: ~/.config/lsd/config.yaml: https://github.com/Peltoche/lsd#configuration
