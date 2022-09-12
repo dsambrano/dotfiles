@@ -24,3 +24,12 @@ echo "source ~/.aliases/package_aliases" >> ~/.zshrc
 
 # Bat symlinks
 ln -s ~/git_repos/dotfiles/config/bat/ $(bat --config-dir)
+
+
+# Tmuxing
+ln -s ~/git_repos/dotfiles/config/.tmux.conf ~/
+tmux source-file ~/.tmux.conf # Set up config file
+cd ~/.tmux/plugins/tpm/bin/
+source ~/.tmux/plugins/tpm/bin/install_plugins
+cd -
+

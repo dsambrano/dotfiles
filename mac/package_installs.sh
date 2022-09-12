@@ -38,6 +38,7 @@ brew install git \
              dust \
              gping \
              zoxide \
+             tmux \
 
 
 # Installing GUI APPs
