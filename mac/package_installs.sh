@@ -47,7 +47,7 @@ brew install git \
 brew install --cask r \
                     rstudio \
                     amethyst \
-                    mpv \
+                    mpv iina \
                     visual-studio-code \
                     sublime-text \
                     iterm2 \
