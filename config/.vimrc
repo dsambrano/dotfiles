@@ -35,7 +35,8 @@ set colorcolumn=80
 set signcolumn=yes
 set smartcase
 set ignorecase
-
+set nohlsearch
+set incsearch
 
 
 """ Keybinds
