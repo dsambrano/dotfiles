@@ -150,7 +150,8 @@ defaults write com.apple.screensaver askForPasswordDelay -int 0
 ##    showClock = 0;
 ##}"
 
-
+# IIna configs
+defaults write com.colliderli.iina enableAdvancedSetting -bool true
 
 
 killall Dock; killall Finder

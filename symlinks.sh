@@ -24,3 +24,18 @@ echo "source ~/.aliases/package_aliases" >> ~/.zshrc
 
 # Bat symlinks
 ln -s ~/git_repos/dotfiles/config/bat/ $(bat --config-dir)
+
+
+# Tmuxing
+ln -s ~/git_repos/dotfiles/config/.tmux.conf ~/
+tmux source-file ~/.tmux.conf # Set up config file
+cd ~/.tmux/plugins/tpm/bin/
+source ~/.tmux/plugins/tpm/bin/install_plugins
+cd -
+
+# If I want to add lsd configs: they go here: ~/.config/lsd/config.yaml: https://github.com/Peltoche/lsd#configuration
+
+# MPV
+ln -s ~/git_repos/dotfiles/configs/mpv ~/.config/
+
+# Others I still need to symlink

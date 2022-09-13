@@ -38,6 +38,7 @@ sudo dnf install -y \
     zoxide \
     fd-find \
     cargo \
+    tmux \
 
 # Need to add to path for zoxide:
 eval "$(zoxide init zsh)"

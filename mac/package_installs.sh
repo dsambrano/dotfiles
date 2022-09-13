@@ -38,13 +38,16 @@ brew install git \
              dust \
              gping \
              zoxide \
+             fd \
+             rust \
+             tmux \
 
 
 # Installing GUI APPs
 brew install --cask r \
                     rstudio \
                     amethyst \
-                    mpv \
+                    mpv iina \
                     visual-studio-code \
                     sublime-text \
                     iterm2 \
