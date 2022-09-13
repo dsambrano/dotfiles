@@ -37,6 +37,7 @@ sudo dnf install -y \
     duf \
     zoxide \
     fd-find \
+    ripgrep \
     cargo \
     tmux \
 
