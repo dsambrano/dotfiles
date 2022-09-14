@@ -38,4 +38,7 @@ cd -
 # MPV
 ln -s ~/git_repos/dotfiles/configs/mpv ~/.config/
 
+# RStudio
+ln -s ~/git_repos/dotfiles/configs/rstudio ~/.config/
+
 # Others I still need to symlink
