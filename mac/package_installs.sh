@@ -2,7 +2,7 @@
 
 # Installing Xcode and the package Manager
 sudo xcode-select --install || sudo xcode-select --reset || echo "XCode Already installed"
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+brew upgrade || echo "Installing Homebrew" /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
 # Installing CLI apps
 brew install git \

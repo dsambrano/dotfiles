@@ -51,16 +51,17 @@ mkdir -p ~/git_repos/
 cd ~/git_repos/
 repos={dotfiles,code_samples}
 for i in $repos; do
-    git clone git@github.com:dsambrano/$i.git
+    git pull || git clone git@github.com:dsambrano/$i.git
 done
 cd -
 
 # Tmux plugin manager
-git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+{cd ~/.tmux/plugins/tpm && git pull && cd -} || git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
 # Install vim-plug to use plugins for nvim: https://github.com/junegunn/vim-plug
 sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
-       https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+       https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim' || \
+       echo "vim-plug already installed"
 # Sym links require the clone of the main repo first to work. 
 source ./symlinks.sh $OS_DIR
 
