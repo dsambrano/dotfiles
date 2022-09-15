@@ -7,7 +7,7 @@ GITEMAIL=$2
 git config --global user.name $GITUNAME
 git config --global user.email $GITEMAIL
 git config --global pull.rebase false # true for rebase: source for meaning: https://stackoverflow.com/a/70627815
-git config --global core.excludesFile ".DS_Store"
+git config --global core.excludesFile "~/.gitignore_global" # https://stackoverflow.com/a/19299889
 
 
 # Evaluate Zoxide for Modern CD:
@@ -62,3 +62,7 @@ Host template
 
 """ >> ~/.ssh/config
 
+# Exports which need to be added to my ~/.zshrc file:
+# export PATH="$HOME/.cargo/bin:$PATH"
+# echo "source ~/.aliases/aliases" >> ~/.zshrc # https://superuser.com/a/331766
+# echo "source ~/.aliases/package_aliases" >> ~/.zshrc
