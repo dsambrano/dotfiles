@@ -9,6 +9,7 @@ set -e
 ### - Do you want to Sym links to keep all the files up to date?
 ### - Do you want to download the GH repos that I keep for default?
 # Setup sample: https://sourabhbajaj.com/mac-setup/
+## It looks like if I used source to call the script, I dont need to pass the variables: https://unix.stackexchange.com/a/172055
 read -p "User Name for Git: " GITUNAME
 read -p "Email for User Name: " GITEMAIL
 read -p "What OS are you using? [Mac/Ubuntu/Fedora] " OS
