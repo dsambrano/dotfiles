@@ -10,6 +10,7 @@ call plug#begin()
 " Core (treesitter, nvim-lspconfig, nvim-cmp, nvim-telescope, nvim-lualine)
 Plug 'ThePrimeagen/vim-be-good'
 Plug 'nvim-treesitter/nvim-treesitter', { 'do': ':TSUpdate' }
+""" Plug 'nvim-treesitter/nvim-treesitter-context' https://github.com/nvim-treesitter/nvim-treesitter-context
 Plug 'nvim-treesitter/playground'
 Plug 'neovim/nvim-lspconfig'
 Plug 'hrsh7th/cmp-nvim-lsp'
@@ -75,6 +76,13 @@ set textwidth=0
 set hidden
 set number
 set title
+set nohlsearch
+
+set noswapfile
+if has('persistent_undo')         "check if your vim version supports
+  set undodir=$HOME/.vim/undo     "directory where the undo files will be stored
+  set undofile                    "turn on the feature
+endif
 
 """ Filetype-Specific Configurations
 
