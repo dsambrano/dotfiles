@@ -40,6 +40,7 @@ sudo dnf install -y \
     fd-find \
     cargo \
     tmux \
+    rstudio \
 
 # Need to add to path for zoxide:
 eval "$(zoxide init zsh)"
