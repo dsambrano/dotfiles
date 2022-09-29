@@ -19,7 +19,8 @@
             "Plots",
             "Packages",
             "Help",
-            "Viewer"
+            "Viewer",
+            "Presentations"
         ],
         "console_left_on_top": false,
         "console_right_on_top": true
@@ -36,5 +37,15 @@
     "document_author": "Deshawn Sambrano",
     "wrap_tab_navigation": false,
     "reuse_sessions_for_project_links": true,
-    "jobs_tab_visibility": "shown"
+    "jobs_tab_visibility": "shown",
+    "initial_working_directory": "~",
+    "cran_mirror": {
+        "name": "USA (OR) [https]",
+        "host": "Oregon State University",
+        "url": "https://ftp.osuosl.org/pub/cran/",
+        "country": "us",
+        "ok": 1,
+        "secondary": ""
+    },
+    "posix_terminal_shell": "zsh"
 }
