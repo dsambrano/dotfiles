@@ -41,6 +41,7 @@ sudo dnf install -y \
     cargo \
     tmux \
     rstudio-desktop R \
+    cmake \
 
 # Need to add to path for zoxide:
 eval "$(zoxide init zsh)"
