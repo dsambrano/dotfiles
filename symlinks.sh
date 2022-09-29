@@ -39,6 +39,7 @@ cd -
 ln -s ~/git_repos/dotfiles/configs/mpv ~/.config/
 
 # RStudio
+rstudioapi::addTheme("https://raw.githubusercontent.com/dracula/rstudio/master/dracula.rstheme", apply = TRUE)
 ln -s ~/git_repos/dotfiles/configs/rstudio ~/.config/
 
 # Others I still need to symlink
