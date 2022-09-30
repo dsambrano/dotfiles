@@ -30,7 +30,7 @@
     "show_margin": false,
     "show_diagnostics_other": true,
     "font_size_points": 14,
-    "editor_theme": "Tomorrow Night Bright",
+    "editor_theme": "Dracula",
     "default_project_location": "~",
     "default_sweave_engine": "knitr",
     "pdf_previewer": "system",
