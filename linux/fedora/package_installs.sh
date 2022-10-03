@@ -42,6 +42,7 @@ sudo dnf install -y \
     tmux \
     rstudio-desktop R \
     cmake \
+    ocrmypdf \
 
 # Need to add to path for zoxide:
 eval "$(zoxide init zsh)"
