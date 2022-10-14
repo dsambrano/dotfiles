@@ -44,6 +44,7 @@ source ./$OS_DIR/os_configs.sh
 
 # Need to add this to general path: 
 export PATH="$HOME/.cargo/bin:$PATH"
+export RIPGREP_CONFIG_PATH=$HOME/.config/ripgrep/.ripgreprc
 
 # Authorize GitHub
 gh auth login
