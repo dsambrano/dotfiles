@@ -36,7 +36,7 @@ cd -
 # If I want to add lsd configs: they go here: ~/.config/lsd/config.yaml: https://github.com/Peltoche/lsd#configuration
 
 # MPV
-ln -s ~/git_repos/dotfiles/configs/mpv ~/.config/
+ln -s ~/git_repos/dotfiles/config/mpv ~/.config/
 
 # RStudio
 rstudioapi::addTheme("https://raw.githubusercontent.com/dracula/rstudio/master/dracula.rstheme", apply = TRUE)
