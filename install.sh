@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
 
+# Ask for the administrator password upfront
+sudo -v
+
 set -e
 
 ## Also need some of the following options:
@@ -25,11 +28,11 @@ fi
 
 
 # Install all the packages for the OS
-./$OS_DIR/package_install.sh
+/bin/bash ./$OS_DIR/package_install.sh
 
 # Now Set up all the configs. First the general then the specific, to overwrite if necessary. 
-./configs.sh
-./$OS_DIR/os_configs.sh
+/bin/bash ./configs.sh
+/bin/bash ./$OS_DIR/os_configs.sh
 
 # Authorize GitHub
 gh auth login
@@ -44,14 +47,14 @@ done
 cd -
 
 # Sym links require the clone of the main repo first to work. 
-./symlinks.sh	
+/bin/bash ./symlinks.sh	
 
 
 ## Conditionals. This is where I would set up things like the GoXLR and smashbox/gaming setup etc
 read -p "Would you like to install Anime-Terminal to download/stream anime with CLI: [Y/n] ? " anime
 restart=${restart:-N}
 if [ $anime == "Y" ]; then
-    ./conditional_installs/anime.sh
+    /bin/bash ./conditional_installs/anime.sh
 fi
 
 # End script and restart 
