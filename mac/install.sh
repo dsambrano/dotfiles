@@ -25,8 +25,9 @@ EOF
 export PATH="\$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin" # Added to path to be used immmediately
 
 # Aliases
-cp config/.aliases ~/.aliases
-echo ". ~/.aliases" >> ~/.zshrc # https://superuser.com/a/331766
+cp -r config/.aliases ~/
+echo "source ~/.aliases/aliases" >> ~/.zshrc # https://superuser.com/a/331766
+echo "source ~/.aliases/package_aliases" >> ~/.zshrc
 # Need to also add package_aliases I believe if I have that start with a `.` I can make a single `cp` line
 
 # Install oh-my-zsh
