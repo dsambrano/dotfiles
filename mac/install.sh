@@ -3,13 +3,13 @@
 set -e
 
 # Setup sample: https://sourabhbajaj.com/mac-setup/
-read -p "User Name for Git" GITUNAME
-read -p "Email for User Name" GITEMAIL
+read -p "User Name for Git: " GITUNAME
+read -p "Email for User Name: " GITEMAIL
 
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 sudo xcode-select --install
 
-brew install git gh bat neofetch python fzf htop cmatrix xclip node ffmpeg duti lf nmap netcat docker docker-compose docker-machine trash-cli autojump tldr thefuck espeak tmux ranger 
+brew install git gh bat neofetch python fzf htop cmatrix xclip node ffmpeg duti lf nmap netcat docker-compose docker-machine trash-cli autojump tldr thefuck espeak tmux ranger wget nvim
 brew install --cask r rstudio amethyst mpv visual-studio-code sublime-text iterm2 firefox brave-browser xquartz docker virtualbox zoom slack spotify anaconda onlyoffice edex-ui itsycal insomnia
 
 git config --global user.name $GITUNAME
@@ -23,16 +23,16 @@ cat << EOF >> ~/.zprofile
 export PATH="\$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
 EOF
 
-export PATH="\$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin" # Added to path to be used immmediately
+export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin" # Added to path to be used immediately
+
+# Install oh-my-zsh
+sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
 # Aliases
 cp -r config/.aliases ~/
 echo "source ~/.aliases/aliases" >> ~/.zshrc # https://superuser.com/a/331766
 echo "source ~/.aliases/package_aliases" >> ~/.zshrc
 # Need to also add package_aliases I believe if I have that start with a `.` I can make a single `cp` line
-
-# Install oh-my-zsh
-sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
 # Set up Vim
 cp config/.vimrc ~/.vimrc # If I want to move this to ~/.config I can ln -s or follow this guide: https://vi.stackexchange.com/a/11881 
@@ -56,6 +56,13 @@ for i in {Regular,Bold,Italic,"Bold Italic"}; do
 done
 
 gh auth login
+
+## Setting up git repos:
+mkdir -p ~/git_repos/
+repos={dotfiles,code_samples}
+for i in $repos; do
+    git clone git@github.com:dsambrano/$i.git
+done
 
 # Anime from Terminal
 ## Installing Dependencies 
