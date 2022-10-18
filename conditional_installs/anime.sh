@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 
+## Currently only out of place for testing purposes. When fixed this should not go here. Maybe combine with zsh in a general install. Else could place just inside the install script. Nvm, this needs to go in the conditionals. 
 # Anime from Terminal
 ## Installing Dependencies 
 brew install aria2

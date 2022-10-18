@@ -48,7 +48,11 @@ cd -
 
 
 ## Conditionals. This is where I would set up things like the GoXLR and smashbox/gaming setup etc
-
+read -p "Would you like to install Anime-Terminal to download/stream anime with CLI: [Y/n] ? " anime
+restart=${restart:-N}
+if [ $anime == "Y" ]; then
+    ./conditional_installs/anime.sh
+fi
 
 # End script and restart 
 read -t 30 -p "The configs are complete. Although some will not be updated until the next reboot. Would you like to reboot now? [Y]/N: " restart
