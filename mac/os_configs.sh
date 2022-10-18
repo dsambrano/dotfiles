@@ -17,12 +17,12 @@ __dock_item() {
 
 printf '%s' 'Setting up Dock icons...'
 defaults write com.apple.dock \
-               persistent-apps -array "$(__dock_item /Applications/Safari.app)" \
-				      "$(__dock_item /Application/iTerm.app)"
-				      "$(__dock_item /Application/Firefox.app)"
-                                      "$(__dock_item /System/Applications/Utilities/Terminal.app)"
-                                      "$(__dock_item /System/Applications/Utilities/Messages.app)"
-				      
+               persistent-apps -array "$(__dock_item /Applications/iTerm.app)" \
+				      "$(__dock_item /Application/Brave\ Browser.app)" \
+				      "$(__dock_item /Application/Docker.app)" \
+                                      "$(__dock_item /Application/RStudio.app)" \ 
+				      "$(__dock_item /Application/Slack.app)" \
+                                      "$(__dock_item /System/Applications/Utilities/Messages.app)" \ 
 
 printf '%s\n' ' done.'
 
