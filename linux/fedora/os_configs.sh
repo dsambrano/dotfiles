@@ -23,3 +23,15 @@ echo "eval `dircolors ~/.dir_colors/dircolors`" >> ~/.zshrc
 sudo dnf install -y util-linux-user  util-linux
 chsh -s $(which zsh)
 
+
+# More g settings:
+dconf dump /org/gnome/settings-daemon/plugins/media-keys/ # Getting default keybinds: https://unix.stackexchange.com/a/134182
+#[/]
+# custom-keybindings=['/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/']
+# www=['<Super>b']
+# 
+# [custom-keybindings/custom0]
+# binding='<Super>t'
+# command='gnome-terminal'
+# name='Launch Terminal'
+
