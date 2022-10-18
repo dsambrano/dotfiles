@@ -1,6 +1,16 @@
 #!/usr/bin/env bash
 
-sudo dnf install git gnome-tweaks dnf-plugins-core 'dnf-command(config-manager)' zsh neovim bat neofetch htop fzf cmatrix nmap tldr rust mpv
+# Installing RPM Fusion Repos
+## Free
+sudo dnf install \
+  https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm -y
+## Non Free
+sudo dnf install \
+  https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm -y
+
+sudo dnf update -y
+
+sudo dnf install git gnome-tweaks dnf-plugins-core 'dnf-command(config-manager)' zsh neovim bat neofetch htop fzf cmatrix nmap tldr rust mpv aria2 steam-devices -y
 
 # Exports 
 export EDITOR=/usr/bin/nvim
@@ -23,6 +33,7 @@ mkdir ~/git_repos
 git auth login
 
 # Install Docker
+## Source: https://docs.docker.com/engine/install/fedora/#install-using-the-repository
 sudo dnf config-manager \
     --add-repo \
     https://download.docker.com/linux/fedora/docker-ce.repo
@@ -34,14 +45,6 @@ sudo systemctl start docker
 sudo dnf install wget -y 
 wget https://zoom.us/client/latest/zoom_x86_64.rpm
 dnf localinstall zoom_x86_64.rpm
-
-# Installing RPM Fusion Repos
-## Free
-sudo dnf install \
-  https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm -y
-## Non Free
-sudo dnf install \
-  https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm -y
 
 # Install Custom fonts
 install_fonts() { # Taken from: https://apple.stackexchange.com/a/321938
@@ -67,7 +70,7 @@ flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flat
 flatpak remote-modify --enable flathub
 
 ## Installing Flatpak Apps
-flatpak install flathub com.slack.Slack com.discordapp.Discord # net.davidotek.pupgui2 #(previous one is for protonup-qt) com.brave.Browser
+flatpak install flathub com.slack.Slack # net.davidotek.pupgui2 #(previous one is for protonup-qt) com.brave.Browser
 # Other potential useful software dev tools: 
 # - rest.insomnia.Insomnia: Insomnia for web dev/ head testing info
 
@@ -78,5 +81,6 @@ sudo dnf install kmod-nvidia -y
 sudo dnf install xorg-x11-drv-nvidia-cuda -y # This is for cuda support (likely for ML)
 
 ## Installing packages
-sudo dnf install gamemode
-flatpak install flathub com.valvesoftware.Steam # not sure if I want fp version or nah 
+sudo dnf install gamemode discord steam
+# flatpak install flathub com.valvesoftware.Steam com.discordapp.Discord # not sure if I want fp version or nah 
+flatpak install flathub net.davidotek.pupgui2 # net.lutris.Lutris com.heroicgameslauncher.hgl
