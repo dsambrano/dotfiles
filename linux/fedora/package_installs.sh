@@ -45,6 +45,7 @@ sudo dnf install -y \
     cmake \
     xclip \
     libwebp-tools \
+    gstreamer1-libav \
     ocrmypdf \
 
 # Need to add to path for zoxide:
