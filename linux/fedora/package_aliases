@@ -1,0 +1,4 @@
+alias search="dnf search "
+alias install="dnf install "
+alias update="dnf update"
+alias upgrade="dnf upgrade"
