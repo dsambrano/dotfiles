@@ -56,8 +56,8 @@ defaults write com.apple.dock no-bouncing -bool true # Remove bouncing animation
 defaults write com.apple.dock wvous-tr-corner -int 2
 defaults write com.apple.dock wvous-tr-modifier -int 0
 ### Top right screen corner → Put Display to Sleep
-defaults write com.apple.dock wvous-tr-corner -int 10
-defaults write com.apple.dock wvous-tr-modifier -int 0
+defaults write com.apple.dock wvous-br-corner -int 10
+defaults write com.apple.dock wvous-br-modifier -int 0
 
 
 # Was looking for additional things to change. One solution came up: https://apple.stackexchange.com/a/322417
