@@ -21,6 +21,7 @@ export PATH="\$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/
 
 # Aliases
 alias xclip="xclip -sel clip"
+alias cat="bat -p"
 
 # Install oh-my-zsh
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
