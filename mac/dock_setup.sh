@@ -40,7 +40,7 @@ git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-m
 defaults write com.apple.dock orientation left # Place on left
 defaults write com.apple.dock "autohide" -bool "true" # Auto hide
 defaults write com.apple.dock "autohide-time-modifier" -float "0" # No animation time
-defaults write com.apple.dock no-bouncing -bool FALSE # Remove bouncing animation from: https://www.switchingtomac.com/tutorials/how-to-permanently-stop-dock-icons-from-bouncing/
+defaults write com.apple.dock no-bouncing -bool true # Remove bouncing animation from: https://www.switchingtomac.com/tutorials/how-to-permanently-stop-dock-icons-from-bouncing/
 
 # Finder config
 defaults write NSGlobalDomain "AppleShowAllExtensions" -bool "true" # Show extensions
