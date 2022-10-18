@@ -10,7 +10,7 @@ sudo dnf install \
 
 sudo dnf update -y
 
-sudo dnf install git gnome-tweaks dnf-plugins-core 'dnf-command(config-manager)' zsh neovim bat neofetch htop fzf cmatrix nmap tldr rust mpv aria2 steam-devices -y
+sudo dnf install git gnome-tweaks dnf-plugins-core 'dnf-command(config-manager)' zsh neovim bat neofetch htop fzf cmatrix nmap tldr rust mpv aria2 steam-devices gnome-open libgnome -y
 
 # Exports 
 export EDITOR=/usr/bin/nvim
