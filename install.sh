@@ -11,8 +11,9 @@ set -e
 # Setup sample: https://sourabhbajaj.com/mac-setup/
 ## It looks like if I used source to call the script, I dont need to pass the variables: https://unix.stackexchange.com/a/172055
 ## Otherwise, you can just export them: https://unix.stackexchange.com/a/132701
-read -p "User Name for Git: " GITUNAME
-read -p "Email for User Name: " GITEMAIL
+read -p "User Name for Git (the username used to access your account; all lower case): " GITUNAME
+#read -p "Email for User Name: " GITEMAIL
+GITEMAIL=$(GITUNAME)@users.noreply.github.com
 read -p "What OS are you using? [Mac/Ubuntu/Fedora] " OS
 # Obviously need to make it so they cant set incorret OS. 
 # Also should make it download the folder once you select the OS probs. 
