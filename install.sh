@@ -46,6 +46,9 @@ for i in $repos; do
 done
 cd -
 
+# Tmux plugin manager
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+
 # Install vim-plug to use plugins for nvim: https://github.com/junegunn/vim-plug
 sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
        https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
