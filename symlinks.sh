@@ -42,4 +42,7 @@ ln -s ~/git_repos/dotfiles/config/mpv ~/.config/
 rstudioapi::addTheme("https://raw.githubusercontent.com/dracula/rstudio/master/dracula.rstheme", apply = TRUE)
 ln -s ~/git_repos/dotfiles/configs/rstudio ~/.config/
 
+# Riggrep config: 
+ln -s ~/git_repos/dotfiles/config/ripgrep ~/.config
+
 # Others I still need to symlink
