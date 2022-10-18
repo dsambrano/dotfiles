@@ -33,6 +33,8 @@ sudo systemsetup -setremotelogin on
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k # ZSH_THEME="powerlevel10k/powerlevel10k"
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions # plugins=( git zsh-autosuggestions )
 
+
+## Defaults config see (https://lupin3000.github.io/macOS/defaults/) for additional options
 # Dock Config
 defaults write com.apple.dock orientation left # Place on left
 defaults write com.apple.dock "autohide" -bool "true" # Auto hide
@@ -42,6 +44,9 @@ defaults write com.apple.dock "autohide-time-modifier" -float "0" # No animation
 # Finder config
 defaults write NSGlobalDomain "AppleShowAllExtensions" -bool "true" # Show extensions
 defaults write com.apple.Finder "AppleShowAllFiles" -bool "true" # Show hidden files
+defaults write com.apple.Finder _FXSortFoldersFirst -bool true # folders on top when sorting by name
+defaults write com.apple.Finder _FXShowPosixPathInTitle -bool true # show POSIX path
+defaults write com.apple.Finder WarnOnEmptyTrash -bool false # disable the warning before emptying the Trash
 
 
 # Menu config
