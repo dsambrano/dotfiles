@@ -14,6 +14,11 @@ read -p "Email for User Name: " GITEMAIL
 read -p "What OS are you using? [Mac/Ubuntu/Fedora] " OS
 # Obviously need to make it so they cant set incorret OS. 
 # Also should make it download the folder once you select the OS probs. 
+# In order to auto detect OS, I cam use this for Mac vs Linux: From Line 505 from https://github.com/pystardust/ani-cli/blob/master/ani-cli
+# case "$(uname)" in
+# 	Darwin*) player_fn='iina';;
+# 	*) player_fn='mpv';;
+# esac
 if [ $OS  == "Mac" ]; then
     OS_DIR=mac
 fi
