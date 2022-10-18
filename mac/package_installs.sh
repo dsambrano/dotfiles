@@ -39,6 +39,7 @@ brew install git \
              gping \
              zoxide \
              fd \
+             ripgrep \
              rust \
              tmux \
 
