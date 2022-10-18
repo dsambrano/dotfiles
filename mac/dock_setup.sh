@@ -59,7 +59,9 @@ defaults write com.apple.dock wvous-tr-corner -int 10
 defaults write com.apple.dock wvous-tr-modifier -int 0
 
 
+# Was looking for additional things to change. One solution came up: https://apple.stackexchange.com/a/322417
 # Finder config
+defaults write NSGlobalDomain AppleShowScrollBars -string "WhenScrolling" # Show scroll bars only when scrolling: options are Always
 defaults write NSGlobalDomain "AppleShowAllExtensions" -bool "true" # Show extensions
 defaults write com.apple.Finder "AppleShowAllFiles" -bool "true" # Show hidden files
 defaults write com.apple.Finder _FXSortFoldersFirst -bool true # folders on top when sorting by name
@@ -102,7 +104,7 @@ defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad TrackpadThreeF
 defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad TrackpadThreeFingerTapGesture -int 2
 defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad TrackpadThreeFingerVertSwipeGesture -int 2
 defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad TrackpadTwoFingerDoubleTapGesture -bool true
-defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad TrackpadTwoFingerFromRightEdgeSwipeGesture = 3;
+defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad TrackpadTwoFingerFromRightEdgeSwipeGesture -int 3;
 defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad USBMouseStopsTrackpad -bool false
 
 # Keybinds
