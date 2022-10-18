@@ -1,4 +1,4 @@
-#! /usr/bin/bash
+#!/usr/bin/env bash
 
 set -e
 
@@ -6,7 +6,7 @@ set -e
 xcode-select --install
 
 brew install git gh bat neofetch fzf htop cmatrix xclip node ffmpeg duti lf
-brew install --cask r rstudio amethyst mpv visual-studio-code sublime-text iterm2 firefox brave-browser xquartzdocker zoom slack spotify anaconda
+brew install --cask r rstudio amethyst mpv visual-studio-code sublime-text iterm2 firefox brave-browser xquartzdocker zoom slack spotify anaconda onlyoffice
 
 git config --global user.name 'Deshawn Sambrano'
 git config --global user.email ''
@@ -30,6 +30,16 @@ echo "syntax on
 set number" >> ~/.vimrc # If I want to move this to ~/.config I can ln -s or follow this guide: https://vi.stackexchange.com/a/11881 
 
 duti -s $(osascript -e 'id of app "Visual Studio Code"') .md all # found from https://superuser.com/a/1092184 in comments
+
+# Install fonts
+install_fonts() { # Taken from: https://apple.stackexchange.com/a/321938
+	cd ~/Library/Fonts && { curl -O $1 cd - ; }
+}
+
+for i in {Regular,Bold,Italic,"Bold Italic"}; do
+	install_fonts "https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS NF ${i}.ttf"
+done
+
 
 # Anime from Terminal
 curl "https://raw.githubusercontent.com/whoisYoges/anime-terminal/master/anime-terminal" > anime-terminal
