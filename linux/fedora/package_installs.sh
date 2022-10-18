@@ -43,6 +43,8 @@ sudo dnf install -y \
     tmux \
     rstudio-desktop R \
     cmake \
+    xclip \
+    libwebp-tools \
     ocrmypdf \
 
 # Need to add to path for zoxide:
