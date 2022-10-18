@@ -116,9 +116,9 @@ defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad USBMouseStopsT
 ##mkdir -p ~/Library/Keybindings/
 ##echo """
 ## {
-##    "^x" = cut:;
-##    "^c" = copy:;
-##    "^v" = paste:;
+##    "^x" = "cut:";
+##    "^c" = "copy:";
+##    "^v" = "paste:";
 ##}
 ##""" >> ~/Library/Keybindings/DefaultKeybinding.dict
 
