@@ -45,6 +45,7 @@ sed -i.bak 's,^ZSH_THEME="robbyrussell".*$,ZSH_THEME="powerlevel10k/powerlevel10
 ## - https://www.shell-tips.com/mac/defaults/
 ## - https://wilsonmar.github.io/dotfiles/
 ## - https://github.com/mathiasbynens/dotfiles/blob/master/.macos
+## - https://gist.github.com/vraravam/5e28ca1720c9dddacdc0e6db61e093fe
 # Dock Config
 defaults write com.apple.dock orientation left # Place on left
 defaults write com.apple.dock "autohide" -bool "true" # Auto hide
@@ -70,7 +71,9 @@ defaults write com.apple.Finder WarnOnEmptyTrash -bool false # disable the warni
 # osascript -e 'tell application "Finder" to set desktop picture to POSIX file "<path/to/image>"' # set background image
 defaults write com.apple.finder FXDefaultSearchScope -string "SCcf" # When performing a search, search the current folder by default
 defaults write com.apple.finder FXEnableExtensionChangeWarning -bool false # Disable the warning when changing a file extension
-
+defaults write com.apple.finder ShowStatusBar -bool true # Set Status Bar: https://gist.github.com/vraravam/5e28ca1720c9dddacdc0e6db61e093fe
+defaults write com.apple.finder FXPreferredViewStyle -string "clmv" # Set Finder to column view but has limited success
+defaults write com.apple.finder SearchRecentsSavedViewStyle -string "clmv"
 
 
 # Menu config
@@ -153,11 +156,12 @@ defaults -currentHost write com.apple.screensaver "{
 
 killall Dock; killall Finder
 
-# Set Start Up Apps
-osascript -e 'tell application "iTerm" to open the startup disk'
 
 
-
+## Set Login Items: https://hamstergene.github.io/posts/2013-07-03-editing-osx-login-items-cmdline/
+osascript -e 'tell application "System Events" to make login item at end with properties {path: "/Applications/iTerm.app", hidden:false}'
+osascript -e 'tell application "System Events" to make login item at end with properties {path: "/Applications/Amethyst.app", hidden:false}'
+osascript -e 'tell application "System Events" to make login item at end with properties {path: "/Applications/Itsycal.app", hidden:false}'
 
 
 
