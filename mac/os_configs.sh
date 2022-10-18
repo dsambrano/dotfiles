@@ -32,6 +32,9 @@ printf '%s\n' ' done.'
 sudo systemsetup -setremotelogin on
 # sudo launchctl load -w /System/Library/LaunchDaemons/ssh.plist # not sure if I need both
 
+# Use My Profile and such for iTerm2:
+cp mac/config/com.googlecode.iterm2.plist ~/Library/Preferences/
+
 # Should look into setting this programmatically: https://apple.stackexchange.com/a/362615
 ## Lets you use CRTL # to switch desktops
 
