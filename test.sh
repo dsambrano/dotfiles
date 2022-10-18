@@ -31,3 +31,6 @@ fi
 # Now Set up all the configs. First the general then the specific, to overwrite if necessary. 
 ##/bin/bash ./configs.sh
 source ./$OS_DIR/os_configs.sh
+
+# Sym links require the clone of the main repo first to work. 
+source ./symlinks.sh $OS_DIR
