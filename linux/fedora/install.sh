@@ -11,28 +11,28 @@ sudo dnf install \
 sudo dnf update -y
 
 sudo dnf install -y \
-	git \
-	npm \
-	gnome-tweaks \
-	dnf-plugins-core \
-	'dnf-command(config-manager)' \
-	zsh \
-	neovim \
-	bat \
-	neofetch \
-	htop \
-	fzf \
-	cmatrix \
-	nmap \
-	tldr \
-	rust \
-	mpv \
-	aria2 \
-	steam-devices \
-	gnome-open libgnome \
-	qpwgraph \
-	dconf \
-	wine winetricks
+    git \
+    npm \
+    gnome-tweaks \
+    dnf-plugins-core \
+    'dnf-command(config-manager)' \
+    zsh \
+    neovim \
+    bat \
+    neofetch \
+    htop \
+    fzf \
+    cmatrix \
+    nmap \
+    tldr \
+    rust \
+    mpv \
+    aria2 \
+    steam-devices \
+    gnome-open libgnome \
+    qpwgraph \
+    dconf \
+    wine winetricks
 
 # Exports 
 export EDITOR=/usr/bin/nvim
@@ -126,10 +126,10 @@ flatpak install flathub com.slack.Slack # net.davidotek.pupgui2 #(previous one i
 
 ## Installing GoXLR setup:
 LOCATION=$( curl -s "https://api.github.com/repos/GoXLR-on-Linux/goxlr-utility/releases" \
-	| grep "browser_download_url.*.rpm" \
-	| head -1 \
-	| sed 's/.* //' \
-	| cut -d '"' -f 2) # Removes Double Quotes: https://stackoverflow.com/a/35636517
+    | grep "browser_download_url.*.rpm" \
+    | head -1 \
+    | sed 's/.* //' \
+    | cut -d '"' -f 2) # Removes Double Quotes: https://stackoverflow.com/a/35636517
 wget $LOCATION
 sudo rpm -i goxlr*rpm # Source: https://phoenixnap.com/kb/how-to-install-rpm-file-centos-linux https://www.cyberciti.biz/faq/rhel-redhat-fedora-opensuse-linux-install-rpmfile-command/
 sudo dnf install goxlr-utility
