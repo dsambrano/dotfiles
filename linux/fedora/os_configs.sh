@@ -3,6 +3,12 @@
 # Exports 
 export EDITOR=/usr/bin/nvim
 
+# Improving DNF speed (Should probably do first to make installs faster?): https://druthetux.wordpress.com/2019/12/14/speed-up-dnf-in-fedora/
+echo """
+fastestmirror=True
+max_parallel_downloas=12
+deltarpm=True
+""" | sudo tee -a /etc/dnf/dnf.conf
 
 # Configs	
 setxkbmap -option "caps:swapescape"
