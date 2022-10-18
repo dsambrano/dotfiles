@@ -81,6 +81,6 @@ sudo dnf install kmod-nvidia -y
 sudo dnf install xorg-x11-drv-nvidia-cuda -y # This is for cuda support (likely for ML)
 
 ## Installing packages
-sudo dnf install gamemode discord steam
+sudo dnf install gamemode discord steam mangohud gamescope
 # flatpak install flathub com.valvesoftware.Steam com.discordapp.Discord # not sure if I want fp version or nah 
 flatpak install flathub net.davidotek.pupgui2 # net.lutris.Lutris com.heroicgameslauncher.hgl
