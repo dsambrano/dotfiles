@@ -1,0 +1,5 @@
+# Ignore _site folder: because its just from the blog
+--glob='!_site/*'
+
+# Ignores case unless you have an upper case
+--smart-case
