@@ -37,7 +37,7 @@ set smartcase
 set ignorecase
 set nohlsearch
 set incsearch
-
+set mouse=a
 
 """ Keybinds
 let mapleader=" "
