@@ -97,6 +97,7 @@ fc-cache -v
 
 # NVIM configs
 sudo dnf install -y libstdc++ g++ # https://github.com/nvim-treesitter/nvim-treesitter/issues/626#issuecomment-831972947
+ln -s ~/git_repos/dotfiles/config/nvim ~/.config # Requires that the git repos are already cloned. So this may need to be adjusted. 
 ## need to move Plugin files only here
 nvim +PlugInstall +qall # Installing all Plugins
 ## need to move the rest of the files now: This will prevent the error for theming before installed
