@@ -45,4 +45,7 @@ ln -s ~/git_repos/dotfiles/configs/rstudio ~/.config/
 # Riggrep config: 
 ln -s ~/git_repos/dotfiles/config/ripgrep ~/.config
 
+# Kitty Config:
+ln -s ~/git_repos/dotfiles/config/kitty/ ~/.config
+
 # Others I still need to symlink
