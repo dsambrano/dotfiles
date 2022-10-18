@@ -26,6 +26,13 @@ defaults write com.apple.dock \
 
 printf '%s\n' ' done.'
 
+# Allow Remote login with SSH
+sudo systemsetup -setremotelogin on
+
+# Iterm2 updates don't forget to update the ~/.zshrc to include each of the folloing as plugins:
+git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k # ZSH_THEME="powerlevel10k/powerlevel10k"
+git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions # plugins=( git zsh-autosuggestions )
+
 # Dock Config
 defaults write com.apple.dock orientation left # Place on left
 defaults write com.apple.dock "autohide" -bool "true" # Auto hide

@@ -11,6 +11,7 @@ brew install --cask r rstudio amethyst mpv visual-studio-code sublime-text iterm
 git config --global user.name 'Deshawn Sambrano'
 git config --global user.email ''
 
+alias xclip="xclip -sel clip"
 
 cat << EOF >> ~/.zprofile
 # Add Visual Studio Code (code)
@@ -18,9 +19,6 @@ export PATH="\$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/
 EOF
 
 export PATH="\$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
-
-# Aliases
-echo 'alias xclip="xclip -sel clip"' >> ~/.zshrc
 
 # Install oh-my-zsh
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
