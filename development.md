@@ -17,6 +17,7 @@
     - general configs (change keys and dock settings)
     - set up all sym links
     - should have some of these be general and some specific and the function pulls in whatever is necessary.
+    - Some examples for general. Font install, zsh configs. some specifics would include package_aliases (regular aliases would stay in general)
   - Post installs
     - This is where you do all the install that for whatever reason require additional things first 
   - Conditionals
