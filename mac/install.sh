@@ -33,6 +33,13 @@ sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.
 
 # Set up Vim
 cp config/.vimrc ~/.vimrc # If I want to move this to ~/.config I can ln -s or follow this guide: https://vi.stackexchange.com/a/11881 
+# Setting up the one true vim: NEOVIM
+mkdir - p $HOME/.config/
+cp -r config/nvim ~/.config/nvim
+## Really need to make this an if statement and symbolically link for me but not others
+
+# Setup local bin folder
+mkdir - p $HOME/.config/local/bin
 
 duti -s $(osascript -e 'id of app "Visual Studio Code"') .md all # found from https://superuser.com/a/1092184 in comments
 
