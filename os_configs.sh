@@ -66,5 +66,6 @@ Host template
 
 # Exports which need to be added to my ~/.zshrc file:
 # export PATH="$HOME/.cargo/bin:$PATH"
+# export RIPGREP_CONFIG_PATH=$HOME/.config/ripgrep/.ripgreprc
 # echo "source ~/.aliases/aliases" >> ~/.zshrc # https://superuser.com/a/331766
 # echo "source ~/.aliases/package_aliases" >> ~/.zshrc
