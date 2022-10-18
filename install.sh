@@ -34,6 +34,9 @@ source ./$OS_DIR/package_install.sh
 source ./configs.sh
 source ./$OS_DIR/os_configs.sh
 
+# Need to add this to general path: 
+export PATH="$HOME/.cargo/bin:$PATH"
+
 # Authorize GitHub
 gh auth login
 
