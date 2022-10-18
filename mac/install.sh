@@ -21,7 +21,7 @@ export PATH="\$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/
 
 # Aliases
 cp config/.aliases ~/.aliases
-echo ". ~/.aliases" >> ~/.zshrc
+echo ". ~/.aliases" >> ~/.zshrc # https://superuser.com/a/331766
 
 # Install oh-my-zsh
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
