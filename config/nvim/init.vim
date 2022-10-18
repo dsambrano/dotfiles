@@ -10,6 +10,7 @@ call plug#begin()
 " Core (treesitter, nvim-lspconfig, nvim-cmp, nvim-telescope, nvim-lualine)
 Plug 'ThePrimeagen/vim-be-good'
 Plug 'nvim-treesitter/nvim-treesitter', { 'do': ':TSUpdate' }
+""" Plug 'nvim-treesitter/nvim-treesitter-context' https://github.com/nvim-treesitter/nvim-treesitter-context
 Plug 'nvim-treesitter/playground'
 Plug 'neovim/nvim-lspconfig'
 Plug 'hrsh7th/cmp-nvim-lsp'
