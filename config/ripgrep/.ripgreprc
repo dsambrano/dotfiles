@@ -1,3 +1,6 @@
+# For this config file to work you need to assign `RIPGREP_CONFIG_PATH` as an 
+# environment variable as discussed here: https://github.com/BurntSushi/ripgrep/blob/master/GUIDE.md#configuration-file
+
 # Ignore _site folder: because its just from the blog
 --glob='!_site/*'
 
