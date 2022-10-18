@@ -11,7 +11,7 @@ brew install git \
              neofetch \
              python \
              fzf \
-             btop \
+             gtop \
              cmatrix \
              xclip \
              node \
@@ -31,7 +31,14 @@ brew install git \
              ranger \
              wget \
              nvim \
-             onefetch
+             onefetch \
+             lsd \
+             bottom \
+             duf \
+             dust \
+             gping \
+             zoxide \
+
 
 # Installing GUI APPs
 brew install --cask r \
@@ -53,5 +60,6 @@ brew install --cask r \
                     onlyoffice \
                     edex-ui \
                     itsycal \
-                    insomnia
+                    insomnia \
+
 
