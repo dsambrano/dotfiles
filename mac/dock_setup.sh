@@ -54,6 +54,10 @@ defaults write com.apple.Finder WarnOnEmptyTrash -bool false # disable the warni
 defaults write com.apple.menuextra.clock "DateFormat" -string "\"EEE MMM d  h:mm:ss a\""  # https://macos-defaults.com/#🙋-what-s-a-defaults-command
 defaults write -g AppleInterfaceStyle Dark # https://apple.stackexchange.com/questions/391686/how-to-set-dark-mode-appearance-to-auto-in-terminal
 
+# Set Mouse/Trackpad Speed
+defaults write -g com.apple.trackpad.scaling -float 3.0
+defaults write -g com.apple.mouse.scaling -float 3.0
+
 
 killall Dock
 
