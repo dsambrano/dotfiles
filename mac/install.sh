@@ -52,6 +52,7 @@ for i in {Regular,Bold,Italic,"Bold Italic"}; do
 	install_fonts "https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS NF ${i}.ttf"
 done
 
+gh auth login
 
 # Anime from Terminal
 ## Installing Dependencies 
