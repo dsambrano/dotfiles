@@ -47,6 +47,7 @@ wget https://zoom.us/client/latest/zoom_x86_64.rpm
 dnf localinstall zoom_x86_64.rpm
 
 # Install Custom fonts
+## Linux Source: https://docs.fedoraproject.org/en-US/quick-docs/fonts/
 install_fonts() { # Taken from: https://apple.stackexchange.com/a/321938
     FONT_DIR=~/.local/share/fonts/$1/
     mkdir -p $FONT_DIR
