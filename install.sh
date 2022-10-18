@@ -38,6 +38,7 @@ source ./$OS_DIR/package_install.sh
 # Now Set up all the configs. First the general then the specific, to overwrite if necessary. 
 source ./configs.sh
 source ./$OS_DIR/os_configs.sh
+# Set up vim mode for regular terminal commands: https://koenwoortman.com/zsh-vim-mode/
 
 # Need to add this to general path: 
 export PATH="$HOME/.cargo/bin:$PATH"
