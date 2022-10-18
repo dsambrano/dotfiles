@@ -55,6 +55,9 @@ defaults write com.apple.dock wvous-tr-modifier -int 0
 defaults write com.apple.dock wvous-br-corner -int 10
 defaults write com.apple.dock wvous-br-modifier -int 0
 
+# Prevent rearranging spaces:
+defaults write com.apple.dock mru-spaces -bool false # https://gist.github.com/vraravam/5e28ca1720c9dddacdc0e6db61e093fe line 949
+defaults write com.apple.dock expose-animation-duration -float 0.5 # Speed up Mission controll animations
 
 # Was looking for additional things to change. One solution came up: https://apple.stackexchange.com/a/322417
 # Finder config

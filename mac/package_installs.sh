@@ -9,7 +9,7 @@ brew install git \
              gh \
              bat \
              neofetch \
-             python \
+             python ipython\
              fzf \
              gtop \
              cmatrix \
