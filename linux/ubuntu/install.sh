@@ -5,22 +5,23 @@ GUI=${GUI:-server}
 
 # INSTALL
 sudo apt update && sudo apt upgrade
-sudo apt install build-essential git unattended-upgrades hollywood cmatrix nginx openssh-server autojump neofetch
+sudo apt install nala #nala-legacy on older than 22.04 # https://youtu.be/oroSkR4Nn_w https://christitus.com/stop-using-apt/
+sudo nala install build-essential git unattended-upgrades hollywood cmatrix nginx openssh-server autojump neofetch
 
 ## Github
 curl -fsSL https://cli.github.com/packages/githubcli-archive-keyring.gpg | sudo dd of=/usr/share/keyrings/githubcli-archive-keyring.gpg
 sudo chmod go+r /usr/share/keyrings/githubcli-archive-keyring.gpg
 echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/githubcli-archive-keyring.gpg] https://cli.github.com/packages stable main" | sudo tee /etc/apt/sources.list.d/github-cli.list > /dev/null
-sudo apt update
-sudo apt install gh
+sudo nala update
+sudo nala install gh
 
 ## SERVER APPS
 ### Nginx
 . /etc/os-release
 deb https://nginx.org/packages/ubuntu/ $VERSION_CODENAME nginx
 deb-src https://nginx.org/packages/ubuntu/ $VERSION_CODENAME nginx
-sudo apt update
-sudo apt install nginx
+sudo nala update
+sudo nala install nginx
 https://www.deb-multimedia.org/dists/testing/main/binary-amd64/package/mpv
 #### Open relevant ports
 sudo ufw allow nginx 
@@ -29,17 +30,17 @@ sudo systemctl start nginx
 sudo systemctl enable nginx
 
 ## GUI APPS
-sudo apt install mpv
+sudo nala install mpv
 ### Brave Browser
 sudo curl -fsSLo /usr/share/keyrings/brave-browser-archive-keyring.gpg https://brave-browser-apt-release.s3.brave.com/brave-browser-archive-keyring.gpg
 echo "deb [signed-by=/usr/share/keyrings/brave-browser-archive-keyring.gpg arch=amd64] https://brave-browser-apt-release.s3.brave.com/ stable main"|sudo tee /etc/apt/sources.list.d/brave-browser-release.list
-sudo apt install brave-browser
+sudo nala install brave-browser
 
 ### Firefox
 sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys A6DCF7707EBC211F
 sudo apt-add-repository "deb http://ppa.launchpad.net/ubuntu-mozilla-security/ppa/ubuntu focal main"
-sudo apt update
-sudo apt install firefox
+sudo nala update
+sudo nala install firefox
 
 ### Anime Terminal
 curl "https://raw.githubusercontent.com/whoisYoges/anime-terminal/master/anime-terminal" > anime-terminal
@@ -73,6 +74,6 @@ sudo dpkg-reconfigure --priority=low unattended-upgrades
 
 
 # ALIASES
-alias update='sudo apt update && sudo apt upgrade && sudo apt dist-upgrade'
+alias update='sudo nala update && sudo nala upgrade && sudo nala dist-upgrade'
 alias bat='batcat'
 alias cat='bat -p
