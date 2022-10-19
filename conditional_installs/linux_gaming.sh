@@ -13,6 +13,3 @@ flatpak install flathub net.davidotek.pupgui2 # net.lutris.Lutris com.heroicgame
 ### Below is no longer needed because I am switching from flatpak to the fusion repos
 ## Game Specific info: So it turns out that installing steam via flatpak moves things just a tad, but here is the location for apex's config file under flatpak install. You will want to change the profile/profile.cfg as well as videoconfig.txt and settings.cfg from the local folder. directory located: /home/buddy/.var/app/com.valvesoftware.Steam/.local/share/Steam/steamapps/compatdata/1172470/pfx/drive_c/users/steamuser/Saved Games/Respawn/Apex 
 
-# OBS:
-sudo dnf install kmod-v4l2loopback
-flatpak install flathub com.obsproject.Studio
