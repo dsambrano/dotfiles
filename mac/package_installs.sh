@@ -67,3 +67,10 @@ brew install --cask r \
                     insomnia \
 
 
+# Install Ani-cli 
+brew install curl grep axel openssl@1.1 ffmpeg git && \
+brew install --cask iina
+rm -rf "$(brew --prefix)/share/ani-cli" "$(brew --prefix)/bin/ani-cli" "$(brew --prefix)/bin/UI" "$(brew --prefix)"/bin/player_* #If some of these aren't found, it's not a problem
+git clone "https://github.com/pystardust/ani-cli.git" && cd ./ani-cli
+cp ./ani-cli "$(brew --prefix)"/bin 
+cd .. && rm -rf ./ani-cli
