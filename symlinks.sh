@@ -51,4 +51,7 @@ ln -s ~/git_repos/dotfiles/config/kitty/ ~/.config
 # Gitignore Global
 ln -s ~/git_repos/dotfiles/config/.gitignore_global ~/
 
+# LSD config
+ln -s ~/git_repos/dotfiles/config/lsd ~/.config/
+
 # Others I still need to symlink

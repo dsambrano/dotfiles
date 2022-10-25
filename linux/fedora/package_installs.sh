@@ -34,7 +34,6 @@ sudo dnf install -y \
     qpwgraph \
     dconf \
     wine winetricks \
-    lsd \
     duf \
     zoxide \
     fd-find \
@@ -60,8 +59,9 @@ sudo dnf copr enable atim/gping -y && sudo dnf install gping -y
 sudo npm install gtop -g
 
 # Installing from cargo
-cargo install du-dust
 export PATH="$HOME/.cargo/bin:$PATH"
+cargo install du-dust
+cargo install lsd
 
 
 # Install Brave
