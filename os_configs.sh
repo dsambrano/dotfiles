@@ -27,6 +27,9 @@ sed -i.bak 's/^plugins=(.*).*$/plugins=(git zsh-autosuggestions)/' ~/.zshrc
 sed -i.bak 's,^ZSH_THEME="robbyrussell".*$,ZSH_THEME="powerlevel10k/powerlevel10k",' ~/.zshrc
 # Another needs to be added with this: HIST_STAMPS="mm/dd/yyyy"
 # Need more seds with # ENABLE_CORRECTION="true" and # COMPLETION_WAITING_DOTS="true"
+# Here are some more for the p10k theme file at ~/.p10k.zsh:
+# typeset -g POWERLEVEL9K_OS_ICON_FOREGROUND=232
+# typeset -g POWERLEVEL9K_OS_ICON_BACKGROUND=7
 
 
 # Install Custom fonts
