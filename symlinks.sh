@@ -57,4 +57,7 @@ ln -s ~/git_repos/dotfiles/config/.gitignore_global ~/
 # LSD config
 ln -s ~/git_repos/dotfiles/config/lsd ~/.config/
 
+# Amethyst Config:
+ln -s ~/git_repos/dotfiles/config/.amethyst.yml ~/
+
 # Others I still need to symlink
