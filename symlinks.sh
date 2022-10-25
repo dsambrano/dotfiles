@@ -48,6 +48,9 @@ ln -s ~/git_repos/dotfiles/config/ripgrep ~/.config
 # Kitty Config:
 ln -s ~/git_repos/dotfiles/config/kitty/ ~/.config
 
+# Alacritty Config:
+ln -s ~/git_repos/dotfiles/config/alacritty ~/.config
+
 # Gitignore Global
 ln -s ~/git_repos/dotfiles/config/.gitignore_global ~/
 
