@@ -163,6 +163,13 @@ killall Dock; killall Finder
 
 
 ## Set Login Items: https://hamstergene.github.io/posts/2013-07-03-editing-osx-login-items-cmdline/
+# Needs testing with: osascript -e 'tell application "System Events" to get every login item'
+set_login() {
+  osascript -e 'tell application "System Events" to make login item at end with properties {path: "$1", hidden:false}'
+}
+for i in /Applications/{iTerm.app,Amethyst.app,Itsycal.app}; do
+    set_login $i
+done
 osascript -e 'tell application "System Events" to make login item at end with properties {path: "/Applications/iTerm.app", hidden:false}'
 osascript -e 'tell application "System Events" to make login item at end with properties {path: "/Applications/Amethyst.app", hidden:false}'
 osascript -e 'tell application "System Events" to make login item at end with properties {path: "/Applications/Itsycal.app", hidden:false}'
