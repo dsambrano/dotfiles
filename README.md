@@ -36,10 +36,3 @@ This script may take some time depending on your internet connection.
 On a completely fresh computer is will take about 20 minutes with a standard internet connection.
 On a computer that has some of the apps already installed, it can be significantly faster.
 
-Each subfolder contains its own `install.sh` file to set everything up. In addition to setting up all the configs it also downloads all my standard apps, to this will take some time. 
-Before beginning, cd into the install directory and enable execution privleges:
-
-```bash
-cd mac
-chmod +x install.sh
-```
