@@ -1,1 +1,0 @@
-Need to make two folders one for ~/.config/folder and one for ~/.folder

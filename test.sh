@@ -10,7 +10,7 @@ set -e
 ### - Do you want to download the GH repos that I keep for default?
 # Setup sample: https://sourabhbajaj.com/mac-setup/
 GITUNAME="Deshawn Sambrano"
-GITEMAIL="3dbrano3@gmail.com"
+GITEMAIL="test@gmail.com"
 OS=Mac
 # Obviously need to make it so they cant set incorret OS. 
 # Also should make it download the folder once you select the OS probs. 
