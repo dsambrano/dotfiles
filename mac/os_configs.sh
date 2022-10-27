@@ -22,7 +22,7 @@ defaults write com.apple.dock \
 				      "$(__dock_item /Applications/Docker.app)" \
                       "$(__dock_item /Applications/RStudio.app)" \
 				      "$(__dock_item /Applications/Slack.app)" \
-                                      "$(__dock_item /System/Applications/Messages.app)" \
+                      "$(__dock_item /System/Applications/Messages.app)" \
 				      "$(__dock_item /Applications/Insomnia.app)" \
 				      "$(__dock_item /Applications/Spotify.app)" \
 
