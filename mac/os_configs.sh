@@ -170,7 +170,7 @@ osascript -e 'tell application "System Events" to make login item at end with pr
 
 # Add to Path
 ## Adding to path permenantly
-cat << EOF >> ~/.zprofile
+cat << EOF >> ~/.zshrc
 # Add Visual Studio Code (code)
 export PATH="\$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
 EOF
