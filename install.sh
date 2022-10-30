@@ -38,6 +38,12 @@ fi
 # Install all the packages for the OS
 source ./$OS_DIR/package_install.sh
 
+# General Installs
+## Installing latest version of NVM
+wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/HEAD/install.sh | bash
+# git clone https://github.com/nvm-sh/nvm/blob/master/install.sh
+### Using NVM to install latest version of node
+
 # Now Set up all the configs. First the general then the specific, to overwrite if necessary. 
 source ./os_configs.sh $GITUNAME $GITEMAIL
 source ./$OS_DIR/os_configs.sh
