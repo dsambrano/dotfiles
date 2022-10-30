@@ -51,7 +51,7 @@ fc-cache -v
 
 # Setup local bin folder
 mkdir -p $HOME/.config/local/bin
-mkdir -p $HOME/.config/
+mkdir -p $HOME/.local/bin
 
 ## Set up basic SSH template
 mkdir -p ~/.ssh
@@ -70,6 +70,7 @@ Host template
 # Exports which need to be added to my ~/.zshrc file:
 echo 'export PATH="$HOME/.cargo/bin:$PATH"' >> ~/.zshrc
 echo "export RIPGREP_CONFIG_PATH=$HOME/.config/ripgrep/.ripgreprc" >> ~/.zshrc
+echo 'export PATH="$HOME/.local/bin:$PATH"' >> ~/.zshrc
 echo "export EDITOR=/usr/bin/nvim" >> ~/.zshrc
 ## zsh options
 # https://scriptingosx.com/2019/07/moving-to-zsh-part-5-completions/
