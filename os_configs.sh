@@ -53,6 +53,18 @@ fc-cache -v
 mkdir -p $HOME/.config/local/bin
 mkdir -p $HOME/.local/bin
 
+## NPM 
+npm config set prefix '~/.local/' # npm -g install install in ~/.local/bin
+
+## NVIM
+npm i -g pyright
+
+python3 -m venv ~/.config/nvim/env
+source ~/.config/nvim/env/bin/activate
+pip install wheel
+pip install pynvim doq
+deactivate
+
 ## Set up basic SSH template
 mkdir -p ~/.ssh
 echo """Host *
