@@ -192,3 +192,7 @@ duti -s $(osascript -e 'id of app "Visual Studio Code"') .md all # found from ht
 # to check the status run:
 # xattr /Applications/kdenlive.app/
 # source: https://derflounder.wordpress.com/2012/11/20/clearing-the-quarantine-extended-attribute-from-downloaded-applications/
+
+# If you want to allow full disk access you can look into this command source: https://apple.stackexchange.com/a/362872
+# defaults read ~/Library/Preferences/com.apple.universalaccessAuthWarning.plist
+# useful command: echo {Applications/{iterm,kden},Newfolder/{test,1}}
