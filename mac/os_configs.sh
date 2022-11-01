@@ -186,3 +186,9 @@ export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/b
 
 
 duti -s $(osascript -e 'id of app "Visual Studio Code"') .md all # found from https://superuser.com/a/1092184 in comments
+
+# If I want to allow an app to be opened without the security warning, it can be done with:
+# xattr -r -d com.apple.quarantine /Applications/kdenlive.app
+# to check the status run:
+# xattr /Applications/kdenlive.app/
+# source: https://derflounder.wordpress.com/2012/11/20/clearing-the-quarantine-extended-attribute-from-downloaded-applications/
