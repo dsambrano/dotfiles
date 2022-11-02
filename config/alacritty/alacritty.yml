@@ -455,6 +455,9 @@ live_config_reload: true
 # Offer IPC using `alacritty msg` (unix only)
 #ipc_socket: true
 
+mouse_bindings:
+  - { mouse: Middle, action: PasteSelection }
+
 #mouse:
   # Click settings
   #
