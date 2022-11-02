@@ -41,6 +41,8 @@ Plug 'junegunn/vim-easy-align'
 Plug 'scrooloose/nerdcommenter'
 Plug 'Yggdroot/indentLine'
 Plug 'chrisbra/Colorizer'
+Plug 'SirVer/ultisnips'
+Plug 'honza/vim-snippets'
 Plug 'KabbAmine/vCoolor.vim'
 Plug 'dkarter/bullets.vim'
 Plug 'wellle/context.vim'
@@ -89,6 +91,14 @@ if (has("termguicolors"))
     set termguicolors
 endif
 lua require 'colorizer'.setup()
+
+let g:UltiSnipsExpandTrigger="<c-b>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<s-c-b>"
+let g:UltiSnipsListSnippets="<c-x><c-s>"
+let g:ultisnips_python_style = 'google'
+" If you want :UltiSnipsEdit to split your window.
+let g:UltiSnipsEditSplit="vertical"
 
 """ Filetype-Specific Configurations
 
