@@ -1,4 +1,9 @@
 user: 3
+size:
+  none: 2
+  small: 2
+  medium: 2
+  large: 2
 group: 135
 date:
   hour-old: 4
