@@ -47,6 +47,7 @@ Plug 'KabbAmine/vCoolor.vim'
 Plug 'dkarter/bullets.vim'
 Plug 'wellle/context.vim'
 Plug 'antoinemadec/FixCursorHold.nvim'
+Plug 'liuchengxu/vim-which-key', { 'on': ['WhichKey', 'WhichKey!'] }
 
 " Functionalities - Python
 Plug 'psf/black', { 'branch': 'stable' }
@@ -222,6 +223,7 @@ endfunction
 
 " Core
 let mapleader=" "
+nnoremap <silent> <leader> :WhichKey '<Space>'<CR>
 nmap <leader>q :NvimTreeFindFileToggle<CR>
 nmap \ <leader>q
 nmap <leader>r :so ~/.config/nvim/init.vim<CR>
