@@ -65,6 +65,7 @@ brew install --cask r \
                     edex-ui \
                     itsycal \
                     insomnia \
+                    # openconnect-gui vnc-viewer
 
 
 # Install Ani-cli 
