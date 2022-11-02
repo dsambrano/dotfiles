@@ -20,6 +20,20 @@ def update_vscode_font(file, vs_font_setting, font):
         print('Just dumped')
     print(data)
 
+def color_remap() -> None:
+    color_order = ["black", "red", "green", "yellow", "blue", "magenta", "cyan", "white"]
+    mapping = {f"color{x}": color_order[x%8] for x in range(16)}
+    mapping["color1"]
+    # dict = {value:key for key, value in dict.items()}
+    import re
+    text = """
+color0  #13012D
+color8  #6E46A4
+    """
+    hex_colors = re.findall("color.* #(\w+)",text)
+    for i in range(0, 16, 2):
+        print(f"    {color_order[int(i/2)]}: '0x{hex_colors[i]}'")
+
 def main():
     FONT = 'MesloLGS NF'
     FILENAME = os.path.join(os.path.expanduser("~"),'Library','Application Support','Code','User', 'settings.json')

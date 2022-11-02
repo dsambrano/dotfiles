@@ -21,4 +21,4 @@ focus-follows-mouse: false
 
 # Add 10px margin around windows
 window-margins: true
-window-margin-size: 10
+window-margin-size: 20

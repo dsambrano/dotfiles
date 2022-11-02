@@ -84,6 +84,8 @@ echo 'export PATH="$HOME/.cargo/bin:$PATH"' >> ~/.zshrc
 echo "export RIPGREP_CONFIG_PATH=$HOME/.config/ripgrep/.ripgreprc" >> ~/.zshrc
 echo 'export PATH="$HOME/.local/bin:$PATH"' >> ~/.zshrc
 echo "export EDITOR=/usr/bin/nvim" >> ~/.zshrc
+# Bash Colors can be changed with: https://gist.github.com/thomd/7667642
+echo 'export LS_COLORS="*README.md=04;31:$LS_COLORS"' >> ~/.zshrc
 ## zsh options
 # https://scriptingosx.com/2019/07/moving-to-zsh-part-5-completions/
 # echo "source ~/.aliases/aliases" >> ~/.zshrc # https://superuser.com/a/331766
