@@ -17,6 +17,7 @@ alias _='sudo '
 alias xclip="xclip -sel clip"
 alias xcopy="xclip -sel clip"
 alias xpaste="xclip -o"
+alias l='ls -lAh'
 alias ls='ls -G'
 alias ls='lsd'
 alias ll="ls -lh"
