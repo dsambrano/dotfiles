@@ -897,4 +897,4 @@ mouse_bindings:
 
 import:
   - ~/.config/alacritty/themes/purples.yml
-  - ~/.config/alacritty/os_options.yml
+  - ~/.config/alacritty/decorations.yml
