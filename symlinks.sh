@@ -49,6 +49,7 @@ ln -s ~/git_repos/dotfiles/config/ripgrep ~/.config
 ln -s ~/git_repos/dotfiles/config/kitty/ ~/.config
 
 # Alacritty Config:
+mv $OS_DIR/os_options.yml ~/git_repos/config/alacritty/
 ln -s ~/git_repos/dotfiles/config/alacritty ~/.config
 
 # Gitignore Global

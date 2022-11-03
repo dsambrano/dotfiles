@@ -8,8 +8,6 @@
 #
 # All imports must either be absolute paths starting with `/`, or paths relative
 # to the user's home directory starting with `~/`.
-import:
-  - ~/.config/alacritty/themes/purples.yml
 
 # Any items in the `env` entry below will be added as
 # environment variables. Some entries may override variables
@@ -62,7 +60,7 @@ window:
   # Values for `decorations` (macOS only):
   #     - transparent: Title bar, transparent background and title bar buttons
   #     - buttonless: Title bar, transparent background and no title bar buttons
-  decorations: buttonless
+  #decorations: buttonless
 
   # Background opacity
   #
@@ -896,3 +894,7 @@ mouse_bindings:
 
   # Highlight window damage information.
   #highlight_damage: false
+
+import:
+  - ~/.config/alacritty/themes/purples.yml
+  - ~/.config/alacritty/os_options.yml
