@@ -28,6 +28,7 @@ Plug 'nvim-lualine/lualine.nvim'
 Plug 'kyazdani42/nvim-web-devicons'
 Plug 'kyazdani42/nvim-tree.lua'
 Plug 'tmux-plugins/vim-tmux'
+Plug 'quangnguyen30192/cmp-nvim-ultisnips'
 
 " Functionalities
 Plug 'tpope/vim-fugitive'
