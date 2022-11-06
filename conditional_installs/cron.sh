@@ -13,3 +13,6 @@ rm crontab
 
 pip3 install --user pywal
 mkdir -p ~/.config/wal/templates
+
+# Adapted from: https://stackoverflow.com/questions/13442130/git-temporarily-ignore-trivial-changes-to-files
+git update-index --skip-worktree config/alacritty/themes/pywal.yml
