@@ -899,5 +899,5 @@ key_bindings:
   #highlight_damage: false
 
 import:
-  - ~/.config/alacritty/themes/purples.yml
+  - ~/.config/alacritty/themes/pywal.yml
   - ~/.config/alacritty/decorations.yml
