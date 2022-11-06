@@ -10,3 +10,6 @@ echo "0,30 8-23 * * * /home/buddy/git_repos/local_functions/shell/change_wallpap
 crontab crontab_new
 
 rm crontab
+
+pip3 install --user pywal
+mkdir -p ~/.config/wal/templates
