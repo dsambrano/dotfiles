@@ -41,3 +41,4 @@ dconf dump /org/gnome/settings-daemon/plugins/media-keys/ # Getting default keyb
 # command='gnome-terminal'
 # name='Launch Terminal'
 
+gsettings set org.gnome.desktop.interface gtk-theme Adwaita-dark
