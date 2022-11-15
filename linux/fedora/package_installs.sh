@@ -41,7 +41,7 @@ sudo dnf install -y \
     ripgrep \
     cargo \
     tmux \
-    rstudio-desktop R \
+    rstudio-desktop R libjpeg-turbo-devel\
     cmake \
     xclip \
     libwebp-tools \
