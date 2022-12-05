@@ -225,6 +225,8 @@ endfunction
 " Core
 let mapleader=" "
 nnoremap <silent> <leader> :WhichKey '<Space>'<CR>
+nnoremap <C-u> <C-u>zz<CR>
+nnoremap <C-d> <C-d>zz<CR>
 nmap <leader>q :NvimTreeFindFileToggle<CR>
 nmap \ <leader>q
 nmap <leader>r :so ~/.config/nvim/init.vim<CR>
