@@ -54,6 +54,9 @@ Plug 'liuchengxu/vim-which-key', { 'on': ['WhichKey', 'WhichKey!'] }
 Plug 'psf/black', { 'branch': 'stable' }
 Plug 'heavenshell/vim-pydocstring'
 
+" Rust
+Plug 'rust-lang/rust.vim'
+
 " Aesthetics - Colorschemes
 Plug 'dracula/vim', { 'as': 'dracula' }
 Plug 'zaki/zazen'
@@ -195,6 +198,9 @@ autocmd BufLeave term://* stopinsert
 " Python
 let g:python3_host_prog = '~/.config/nvim/env/bin/python3'
 let g:pydocstring_doq_path = '~/.config/nvim/env/bin/doq'
+
+" Rust
+let g:rustfmt_autosave = 1
 
 """ Core plugin configuration (lua)
 lua << EOF
