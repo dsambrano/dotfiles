@@ -27,7 +27,8 @@ sudo dnf install -y \
     cmatrix \
     nmap \
     tldr \
-    rust \
+    # Should probs move to https://www.rust-lang.org/tools/install
+    rust cargo \
     mpv \
     aria2 \
     steam-devices \
@@ -39,7 +40,6 @@ sudo dnf install -y \
     zoxide \
     fd-find \
     ripgrep \
-    cargo \
     tmux \
     rstudio-desktop R libjpeg-turbo-devel\
     cmake \
