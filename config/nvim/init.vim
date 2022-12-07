@@ -200,6 +200,7 @@ let g:pydocstring_doq_path = '~/.config/nvim/env/bin/doq'
 lua << EOF
 servers = {
     'pyright',
+    'rust_analyzer',
     --'tsserver', -- uncomment for typescript. See https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md for other language servers
 }
 require('treesitter-config')
@@ -260,6 +261,7 @@ autocmd Filetype solidity nmap <leader>p :0,$!npx prettier %<CR>
 
 " Telescope mappings
 nnoremap <leader>ff <cmd>Telescope find_files<cr>
+nnoremap <leader>fs <cmd>Telescope grep_string<cr>
 nnoremap <leader>fg <cmd>Telescope live_grep<cr>
 nnoremap <leader>fb <cmd>Telescope buffers<cr>
 nnoremap <leader>fh <cmd>Telescope help_tags<cr>
