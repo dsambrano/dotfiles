@@ -10,6 +10,7 @@ sudo dnf install \
 
 sudo dnf update -y
 
+# Should probs move to https://www.rust-lang.org/tools/install for rust specifically
 sudo dnf install -y \
     git \
     npm \
@@ -27,7 +28,6 @@ sudo dnf install -y \
     cmatrix \
     nmap \
     tldr \
-    # Should probs move to https://www.rust-lang.org/tools/install
     rust cargo \
     mpv \
     aria2 \
