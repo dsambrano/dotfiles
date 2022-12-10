@@ -206,6 +206,7 @@ let g:rustfmt_autosave = 1
 lua << EOF
 servers = {
     'pyright',
+    'clangd', -- could also check out clangd (vs ccls), which apparently has more money backing it: According to Reddit at least
     'rust_analyzer',
     --'tsserver', -- uncomment for typescript. See https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md for other language servers
 }

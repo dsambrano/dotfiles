@@ -43,6 +43,7 @@ sudo dnf install -y \
     tmux \
     rstudio-desktop R libjpeg-turbo-devel\
     cmake \
+    clang clang-devel llvm-devel \
     xclip \
     libwebp-tools \
     gstreamer1-libav \
