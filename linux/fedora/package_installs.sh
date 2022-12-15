@@ -10,6 +10,7 @@ sudo dnf install \
 
 sudo dnf update -y
 
+# Should probs move to https://www.rust-lang.org/tools/install for rust specifically
 sudo dnf install -y \
     git \
     npm \
@@ -27,7 +28,7 @@ sudo dnf install -y \
     cmatrix \
     nmap \
     tldr \
-    rust \
+    rust cargo \
     mpv \
     aria2 \
     steam-devices \
@@ -39,10 +40,10 @@ sudo dnf install -y \
     zoxide \
     fd-find \
     ripgrep \
-    cargo \
     tmux \
     rstudio-desktop R libjpeg-turbo-devel\
     cmake \
+    clang clang-devel llvm-devel \
     xclip \
     libwebp-tools \
     gstreamer1-libav \

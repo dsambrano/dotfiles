@@ -54,6 +54,9 @@ Plug 'liuchengxu/vim-which-key', { 'on': ['WhichKey', 'WhichKey!'] }
 Plug 'psf/black', { 'branch': 'stable' }
 Plug 'heavenshell/vim-pydocstring'
 
+" Rust
+Plug 'rust-lang/rust.vim'
+
 " Aesthetics - Colorschemes
 Plug 'dracula/vim', { 'as': 'dracula' }
 Plug 'zaki/zazen'
@@ -80,7 +83,7 @@ set encoding=utf-8
 set textwidth=0
 set hidden
 set number
-set title
+"   set title
 set nohlsearch
 
 set noswapfile
@@ -196,10 +199,15 @@ autocmd BufLeave term://* stopinsert
 let g:python3_host_prog = '~/.config/nvim/env/bin/python3'
 let g:pydocstring_doq_path = '~/.config/nvim/env/bin/doq'
 
+" Rust
+let g:rustfmt_autosave = 1
+
 """ Core plugin configuration (lua)
 lua << EOF
 servers = {
     'pyright',
+    'clangd', -- could also check out clangd (vs ccls), which apparently has more money backing it: According to Reddit at least
+    'rust_analyzer',
     --'tsserver', -- uncomment for typescript. See https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md for other language servers
 }
 require('treesitter-config')
@@ -225,6 +233,8 @@ endfunction
 " Core
 let mapleader=" "
 nnoremap <silent> <leader> :WhichKey '<Space>'<CR>
+nnoremap <C-u> <C-u>zz<CR>
+nnoremap <C-d> <C-d>zz<CR>
 nmap <leader>q :NvimTreeFindFileToggle<CR>
 nmap \ <leader>q
 nmap <leader>r :so ~/.config/nvim/init.vim<CR>
@@ -258,6 +268,7 @@ autocmd Filetype solidity nmap <leader>p :0,$!npx prettier %<CR>
 
 " Telescope mappings
 nnoremap <leader>ff <cmd>Telescope find_files<cr>
+nnoremap <leader>fs <cmd>Telescope grep_string<cr>
 nnoremap <leader>fg <cmd>Telescope live_grep<cr>
 nnoremap <leader>fb <cmd>Telescope buffers<cr>
 nnoremap <leader>fh <cmd>Telescope help_tags<cr>

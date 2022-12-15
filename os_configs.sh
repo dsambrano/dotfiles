@@ -23,7 +23,7 @@ git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions # plugins=( git zsh-autosuggestions )
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 # Use sed to recreate the file but change the appropriate options to match above. It stores a backup copy but can be remove manually or by replacing -i.bak with -i '' for no backup. https://stackoverflow.com/a/5171935
-sed -i.bak 's/^plugins=(.*).*$/plugins=(git zsh-autosuggestions)/' ~/.zshrc
+sed -i.bak 's/^plugins=(.*).*$/plugins=(git zsh-autosuggestions zsh-syntax-highlighting)/' ~/.zshrc
 sed -i.bak 's,^ZSH_THEME="robbyrussell".*$,ZSH_THEME="powerlevel10k/powerlevel10k",' ~/.zshrc
 # Another needs to be added with this: HIST_STAMPS="mm/dd/yyyy"
 # Need more seds with # ENABLE_CORRECTION="true" and # COMPLETION_WAITING_DOTS="true"
