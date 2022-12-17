@@ -31,6 +31,7 @@ chsh -s $(which zsh)
 
 
 # More g settings:
+# Python script to do it for you is here: https://askubuntu.com/a/597414
 dconf dump /org/gnome/settings-daemon/plugins/media-keys/ # Getting default keybinds: https://unix.stackexchange.com/a/134182
 #[/]
 # custom-keybindings=['/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/']
