@@ -167,12 +167,12 @@ killall Dock; killall Finder
 set_login() {
   osascript -e 'tell application "System Events" to make login item at end with properties {path: "$1", hidden:false}'
 }
-for i in /Applications/{iTerm.app,Amethyst.app,Itsycal.app}; do
+for i in /Applications/{Alacritty.app,Amethyst.app,Itsycal.app}; do
     set_login $i
 done
-osascript -e 'tell application "System Events" to make login item at end with properties {path: "/Applications/iTerm.app", hidden:false}'
-osascript -e 'tell application "System Events" to make login item at end with properties {path: "/Applications/Amethyst.app", hidden:false}'
-osascript -e 'tell application "System Events" to make login item at end with properties {path: "/Applications/Itsycal.app", hidden:false}'
+# osascript -e 'tell application "System Events" to make login item at end with properties {path: "/Applications/iTerm.app", hidden:false}'
+# osascript -e 'tell application "System Events" to make login item at end with properties {path: "/Applications/Amethyst.app", hidden:false}'
+# osascript -e 'tell application "System Events" to make login item at end with properties {path: "/Applications/Itsycal.app", hidden:false}'
 
 
 # Add to Path
