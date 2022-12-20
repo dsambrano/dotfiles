@@ -13,6 +13,8 @@
 #exec --no-startup-id picom -f --config ~/.config/picom/picom.conf
 ## Works better when from terminal https://wiki.archlinux.org/title/Picom#Usage 
 exec "picom &  # or picom -b"
+# Swaps caps lock and Escape key because its more efficient especially with nvim
+exec setxkbmap -option "caps:swapescape"
 # Gives me a Random WallPaper and Alacritty Theme on Start
 exec /usr/bin/bash /home/buddy/git_repos/local_functions/shell/change_theme.sh
 

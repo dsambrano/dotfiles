@@ -55,6 +55,8 @@ editor_cmd = terminal .. " -e " .. editor
 
 -- Run Picom at startup: https://www.reddit.com/r/awesomewm/comments/sgb93y/awesome_wm_got_messed_up_after_installing_picom/
 awful.spawn.with_shell("picom -b")
+-- Swaps caps lock and Escape key because its more efficient especially with nvim
+awful.spawn.with_shell("setxkbmap -option \"caps:swapescape\"")
 -- Gives me a Random WallPaper and Alacritty Theme on Start
 awful.spawn.with_shell("/usr/bin/bash /home/buddy/git_repos/local_functions/shell/change_theme.sh")
 -- Adding gaps: https://www.reddit.com/r/awesomewm/comments/g7b3bq/comment/fog1or1/?utm_source=share&utm_medium=web2x&context=3
