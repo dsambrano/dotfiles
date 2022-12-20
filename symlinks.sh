@@ -69,4 +69,7 @@ ln -s ~/git_repos/dotfiles/config/picom.conf ~/.config/
 ln -s ~/git_repos/dotfiles/config/awesome/ ~/.config
 ln -s ~/git_repos/dotfiles/config/picom.conf ~/.config/
 
+# Ranger Config:
+ln -s ~/git_repos/dotfiles/config/ranger ~/.config
+
 # Others I still need to symlink
