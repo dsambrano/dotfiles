@@ -10,9 +10,11 @@
 # Please see https://i3wm.org/docs/userguide.html for a complete reference!
 
 # Start Picom Based on: https://www.reddit.com/r/archlinux/comments/ea2tih/comment/faueyar/?utm_source=share&utm_medium=web2x&context=3
-exec --no-startup-id picom --config ~/.config/picom/picom.conf
+#exec --no-startup-id picom -f --config ~/.config/picom/picom.conf
 ## Works better when from terminal https://wiki.archlinux.org/title/Picom#Usage 
-# exec "picom &  # or picom -b"
+exec "picom &  # or picom -b"
+# Gives me a Random WallPaper and Alacritty Theme on Start
+exec /usr/bin/bash /home/buddy/git_repos/local_functions/shell/change_theme.sh
 
 set $mod Mod1
 
@@ -185,3 +187,6 @@ bindsym $mod+r mode "resize"
 bar {
         status_command i3status
 }
+
+## Gaps
+bindsym gaps all set 20

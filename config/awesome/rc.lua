@@ -18,9 +18,6 @@ local hotkeys_popup = require("awful.hotkeys_popup")
 -- when client with a matching name is opened:
 require("awful.hotkeys_popup.keys")
 
--- Run Picom at startup: https://www.reddit.com/r/awesomewm/comments/sgb93y/awesome_wm_got_messed_up_after_installing_picom/
-awful.spawn.with_shell("picom -b")
-
 -- {{{ Error handling
 -- Check if awesome encountered an error during startup and fell back to
 -- another config (This code will only ever execute for the fallback config)
@@ -54,6 +51,16 @@ beautiful.init(gears.filesystem.get_themes_dir() .. "default/theme.lua")
 terminal = "alacritty"
 editor = os.getenv("EDITOR") or "vim"
 editor_cmd = terminal .. " -e " .. editor
+
+
+-- Run Picom at startup: https://www.reddit.com/r/awesomewm/comments/sgb93y/awesome_wm_got_messed_up_after_installing_picom/
+awful.spawn.with_shell("picom -b")
+-- Gives me a Random WallPaper and Alacritty Theme on Start
+awful.spawn.with_shell("/usr/bin/bash /home/buddy/git_repos/local_functions/shell/change_theme.sh")
+-- Adding gaps: https://www.reddit.com/r/awesomewm/comments/g7b3bq/comment/fog1or1/?utm_source=share&utm_medium=web2x&context=3
+beautiful.gap_single_client = true
+beautiful.useless_gap = 20
+
 
 -- Default modkey.
 -- Usually, Mod4 is the key with a logo between Control and Alt.
