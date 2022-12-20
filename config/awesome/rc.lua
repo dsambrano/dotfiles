@@ -61,7 +61,7 @@ awful.spawn.with_shell("setxkbmap -option \"caps:swapescape\"")
 awful.spawn.with_shell("/usr/bin/bash /home/buddy/git_repos/local_functions/shell/change_theme.sh")
 -- Adding gaps: https://www.reddit.com/r/awesomewm/comments/g7b3bq/comment/fog1or1/?utm_source=share&utm_medium=web2x&context=3
 beautiful.gap_single_client = true
-beautiful.useless_gap = 20
+beautiful.useless_gap = 10
 
 
 -- Default modkey.
@@ -501,7 +501,7 @@ awful.rules.rules = {
 
     -- Add titlebars to normal clients and dialogs
     { rule_any = {type = { "normal", "dialog" }
-      }, properties = { titlebars_enabled = true }
+      }, properties = { titlebars_enabled = false }
     },
 
     -- Set Firefox to always map on the tag named "2" on screen 1.
