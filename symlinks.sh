@@ -39,7 +39,7 @@ cd -
 ln -s ~/git_repos/dotfiles/config/mpv ~/.config/
 
 # RStudio
-rstudioapi::addTheme("https://raw.githubusercontent.com/dracula/rstudio/master/dracula.rstheme", apply = TRUE)
+rstudioapi::addTheme("https://raw.githubusercontent.com/dracula/rstudio/master/dracula.rstheme", apply = TRUE) #"
 ln -s ~/git_repos/dotfiles/configs/rstudio ~/.config/
 
 # Riggrep config: 
