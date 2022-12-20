@@ -47,6 +47,8 @@ sudo dnf install -y \
     xclip \
     libwebp-tools \
     gstreamer1-libav \
+    i3-gaps i3status i3lock dmenu picom --exclude=rxvt-unicode \
+    awesomewm picom dmenu vicious \
     ocrmypdf \
 
 # Need to add to path for zoxide:
