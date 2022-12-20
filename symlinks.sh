@@ -61,4 +61,12 @@ ln -s ~/git_repos/dotfiles/config/lsd ~/.config/
 # Amethyst Config:
 ln -s ~/git_repos/dotfiles/config/.amethyst.yml ~/
 
+# I3-gaps Config:
+ln -s ~/git_repos/dotfiles/config/i3 ~/.config
+ln -s ~/git_repos/dotfiles/config/picom.conf ~/.config/
+
+# Awesomewm Config:
+ln -s ~/git_repos/dotfiles/config/awesome/ ~/.config
+ln -s ~/git_repos/dotfiles/config/picom.conf ~/.config/
+
 # Others I still need to symlink
