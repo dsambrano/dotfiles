@@ -36,6 +36,23 @@ lsp.use("pyright", {
 		}
 	}
 })
+local cmp = require("cmp")
+local cmp_mappings = lsp.defaults.cmp_mappings({
+    ["<CR>"] = cmp.mapping.confirm({ select = false })
+})
+lsp.setup_nvim_cmp({
+    -- completion = { keyword_length = 1 },
+    preselect = cmp.PreselectMode.None,
+    completion = {
+        completeopt = 'menu,menuone,noinsert,noselect'
+    },
+    sources = {
+        {name = 'path'},
+        {name = 'nvim_lsp', keyword_length = 3},
+        {name = 'buffer', keyword_length = 3},
+        {name = 'luasnip', keyword_length = 2},
+    }
+})
 -- From: https://youtu.be/w7i4amO_zaE?t=1158
 -- Saved so that I can easly change them in the future as needed for more info see,
 --    https://github.com/ThePrimeagen/init.lua/blob/master/after/plugin/lsp.lua#L12
