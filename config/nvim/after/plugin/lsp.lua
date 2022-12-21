@@ -16,6 +16,15 @@ lsp.ensure_installed({
 	"rust_analyzer",
 	"sumneko_lua",
 })
+lsp.configure("sumneko_lua", {
+    settings = {
+        Lua = {
+            diagnostics = {
+                globals = { "vim", "awesome" }
+            }
+        }
+    }
+})
 lsp.use("pyright", {
 	settings = {
 		python = {
