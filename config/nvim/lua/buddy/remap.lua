@@ -1,3 +1,4 @@
+vim.g.mapleader = " "
 vim.keymap.set("n", "<leader>pv", vim.cmd.Ex, { desc = "[P]roject [V]iew" })
 
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv", { desc = "Move Visually Selected Line [J] with Vim Motions" })
@@ -10,7 +11,7 @@ vim.keymap.set("n", "n", "nzzzv", { desc = "Search [n]ext and center" })
 vim.keymap.set("n", "N", "Nzzzv", { desc = "Search [N]ext and center" })
 
 
-vim.keymap.set("x", "<leader>p", [["_dP]], { desc = "[P]aste without replacing Buffer" })
+vim.keymap.set({"v", "x"}, "<leader>p", [["_dP]], { desc = "[P]aste without replacing Buffer" })
 vim.keymap.set({"n", "v"}, "<leader>d", [["_d]], { desc = "[D]elete without replacing Buffer" })
 
 vim.keymap.set({"n", "v"}, "<leader>y", [["+y]], { desc = "[Y]ank to Clipboard" })
