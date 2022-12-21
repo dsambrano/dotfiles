@@ -13,6 +13,8 @@ lsp.ensure_installed({
 	-- "black",
         -- "pydocstyle",
 	"pyright",
+    "html",
+    "cssls",
 	"rust_analyzer",
 	"sumneko_lua",
 })
