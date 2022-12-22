@@ -1,4 +1,5 @@
 watch_later
 env
+venv
 config/alacritty/decorations.yml
 config/nvim/plugin/packer_compiled.lua

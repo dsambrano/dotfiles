@@ -59,8 +59,8 @@ npm config set prefix '~/.local/' # npm -g install install in ~/.local/bin
 ## NVIM
 npm i -g pyright
 
-python3 -m venv ~/.config/nvim/env
-source ~/.config/nvim/env/bin/activate
+python3 -m venv ~/.config/nvim/venv
+source ~/.config/nvim/venv/bin/activate
 pip install wheel
 pip install pynvim doq
 deactivate
