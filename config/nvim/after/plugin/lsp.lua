@@ -37,9 +37,9 @@ lsp.use("pyright", {
 	}
 })
 local cmp = require("cmp")
-local cmp_mappings = lsp.defaults.cmp_mappings({
-    ["<CR>"] = cmp.mapping.confirm({ select = false })
-})
+-- local cmp_mappings = lsp.defaults.cmp_mappings({
+--     ["<CR>"] = cmp.mapping.confirm({ select = false })
+-- })
 lsp.setup_nvim_cmp({
     -- completion = { keyword_length = 1 },
     preselect = cmp.PreselectMode.None,
