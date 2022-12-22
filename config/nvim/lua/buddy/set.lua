@@ -1,5 +1,5 @@
 vim.g.mapleader = " "
-
+vim.g.python3_host_prog = '~/.config/nvim/venv/bin/python3'
 -- Line Numbers Relative and Add line number for middle
 vim.opt.nu = true
 vim.opt.relativenumber = true
