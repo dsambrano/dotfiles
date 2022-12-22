@@ -33,6 +33,7 @@ return require('packer').startup(function(use)
   use 'theprimeagen/harpoon'
   use 'mbbill/undotree'
   use 'tpope/vim-fugitive'
+  use { 'psf/black', branch = "stable" }
   use {
 	  'VonHeikemen/lsp-zero.nvim',
 	  requires = {
@@ -40,6 +41,9 @@ return require('packer').startup(function(use)
 		  {'neovim/nvim-lspconfig'},
 		  {'williamboman/mason.nvim'},
 		  {'williamboman/mason-lspconfig.nvim'},
+
+          -- Formatters
+          { 'mhartington/formatter.nvim' },
 
 		  -- Autocompletion
 		  {'hrsh7th/nvim-cmp'},
