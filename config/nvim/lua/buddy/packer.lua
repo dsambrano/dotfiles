@@ -33,6 +33,11 @@ return require('packer').startup(function(use)
   use 'theprimeagen/harpoon'
   use 'mbbill/undotree'
   use 'tpope/vim-fugitive'
+  use "mhinz/vim-signify"
+  use {
+  'nvim-lualine/lualine.nvim',
+  requires = { 'kyazdani42/nvim-web-devicons', opt = true }
+}
   use { 'psf/black', branch = "main" }
   use {
 	  'VonHeikemen/lsp-zero.nvim',
