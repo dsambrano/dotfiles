@@ -20,6 +20,8 @@ vim.opt.undofile = true
 -- Highlights in Search the Smart way
 vim.opt.hlsearch = false
 vim.opt.incsearch = true
+vim.opt.ignorecase = true
+vim.opt.smartcase = true
 
 vim.opt.termguicolors = true
 
