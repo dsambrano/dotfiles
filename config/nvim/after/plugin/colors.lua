@@ -8,3 +8,4 @@ end
 
 require("colorizer").setup()
 ColorsNVim()
+vim.cmd[[highlight SignColumn guibg=none]]
