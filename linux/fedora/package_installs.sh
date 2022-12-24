@@ -50,7 +50,7 @@ sudo dnf install -y \
     i3-gaps i3status i3lock dmenu picom --exclude=rxvt-unicode \
     awesomewm picom dmenu vicious \
     ranger \
-    texlive-scheme-basic latexmk texlive-datetime texlive-fontaxes texlive-hyphenat texlive-mathdesign texlive-noto texlive-preprint texlive-tabu texlive-tex4ht \
+    texlive-scheme-basic latexmk texlive-datetime texlive-fontaxes texlive-hyphenat texlive-mathdesign texlive-noto texlive-preprint texlive-tabu texlive-tex4ht zathura zathura-plugins-all xdotool\
     ocrmypdf \
 
 # Need to add to path for zoxide:
