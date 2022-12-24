@@ -81,4 +81,5 @@ return require('packer').startup(function(use)
       end
   }
   use "preservim/nerdcommenter"
+  use "lervag/vimtex"
 end)
