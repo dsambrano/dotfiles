@@ -1,4 +1,5 @@
 vim.g.mapleader = " "
+-- vim.g.maplocalleader = '\' -- Default is \ local leader is for each specific file type for plugins that only work on a specific file type
 vim.g.python3_host_prog = '~/.config/nvim/venv/bin/python3'
 -- Line Numbers Relative and Add line number for middle
 vim.opt.nu = true
