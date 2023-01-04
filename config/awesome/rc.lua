@@ -537,6 +537,7 @@ client.connect_signal("manage", function(c)
         and not c.size_hints.user_position
         and not c.size_hints.program_position then
         -- Prevent clients from being unreachable after screen count changes.
+        -- Source for Shapes: https://www.reddit.com/r/awesomewm/comments/61s020/comment/dfgt9hx/?utm_source=share&utm_medium=web2x&context=3
         c.shape = gears.shape.rounded_rect
         awful.placement.no_offscreen(c)
     end
