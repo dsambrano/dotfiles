@@ -118,7 +118,7 @@ mykeyboardlayout = awful.widget.keyboardlayout()
 
 -- {{{ Wibar
 -- Create a textclock widget
-mytextclock = wibox.widget.textclock()
+mytextclock = wibox.widget.textclock(" %a %b %d, %I:%M %p ")
 
 -- Create a wibox for each screen and add it
 local taglist_buttons = gears.table.join(
@@ -287,7 +287,7 @@ globalkeys = gears.table.join(
     -- Standard program
     awful.key({ modkey, }, "Return", function() awful.spawn(terminal) end,
         { description = "open a terminal", group = "launcher" }),
-    awful.key({ modkey, "Alt" }, "l", function() awful.spawn("i3lock -c 000000") end,
+    awful.key({ modkey, "Mod1" }, "l", function() awful.spawn("i3lock -c 000000") end,
         { description = "Lock Screen with i3lock", group = "awesome" }),
     awful.key({ modkey, }, "b", function() awful.spawn("brave-browser") end,
         { description = "Open Brave Browser", group = "launcher" }),
@@ -473,7 +473,7 @@ root.keys(globalkeys)
 awful.rules.rules = {
     -- All clients will match this rule.
     { rule = {},
-        properties = { border_width = beautiful.border_width,
+        properties = { border_width = 0, --beautiful.border_width,
             border_color = beautiful.border_normal,
             focus = awful.client.focus.filter,
             raise = true,
@@ -533,11 +533,12 @@ client.connect_signal("manage", function(c)
     -- Set the windows at the slave,
     -- i.e. put it at the end of others instead of setting it master.
     if not awesome.startup then awful.client.setslave(c) end
-
     if awesome.startup
         and not c.size_hints.user_position
         and not c.size_hints.program_position then
         -- Prevent clients from being unreachable after screen count changes.
+        -- Source for Shapes: https://www.reddit.com/r/awesomewm/comments/61s020/comment/dfgt9hx/?utm_source=share&utm_medium=web2x&context=3
+        c.shape = gears.shape.rounded_rect
         awful.placement.no_offscreen(c)
     end
 end)
