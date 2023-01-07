@@ -41,7 +41,7 @@ sudo dnf install -y \
     fd-find \
     ripgrep \
     tmux \
-    rstudio-desktop R libjpeg-turbo-devel\
+    rstudio-desktop R libjpeg-turbo-devel libcurl-devel.x86_64\
     cmake \
     clang clang-devel llvm-devel \
     xclip \
