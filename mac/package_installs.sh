@@ -40,7 +40,8 @@ brew install git \
              zoxide \
              fd \
              ripgrep \
-             rust \
+             rust rustup \
+             mactex-no-gui skim \
              tmux \
 
 
@@ -67,6 +68,8 @@ brew install --cask r \
                     insomnia \
                     # openconnect-gui vnc-viewer
 
+
+rustup-init # Should install cargo (https://sourabhbajaj.com/mac-setup/Rust/)
 
 # Install Ani-cli 
 brew install curl grep axel openssl@1.1 ffmpeg git && \
