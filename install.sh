@@ -36,7 +36,7 @@ fi
 
 
 # Install all the packages for the OS
-source ./$OS_DIR/package_install.sh
+source ./$OS_DIR/package_installs.sh
 
 # General Installs
 ## Installing latest version of NVM
