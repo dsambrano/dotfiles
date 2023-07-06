@@ -38,6 +38,7 @@ cargo install --locked zoxide bat
 
 ## SERVER APPS
 read -p "Do you want to install Server sercurity and apps: y/N " SERVER
+SERVER=${SERVER:-n}
 if [ $SERVER == "y" ]; then
     ### Nginx
     . /etc/os-release
@@ -69,6 +70,7 @@ fi
 
 ## GUI APPS
 read -p "Do you want to install GUI apps: y/N " GUI_APPS
+GUI_APPS=${GUI_APPS:-n}
 if [ $GUI_APPS == "y" ]; then
     sudo nala install mpv
     ### Brave Browser
