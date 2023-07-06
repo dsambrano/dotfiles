@@ -49,6 +49,8 @@ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash
 ## NVIM
 curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim.appimage
 chmod u+x nvim.appimage
+./nvim.appimage --appimage-extract
+./squashfs-root/AppRun --version
 mv squashfs-root nvim-squashfs-root
 sudo mv nvim-squashfs-root /
 sudo ln -s /nvim-squashfs-root/AppRun /usr/bin/nvim
