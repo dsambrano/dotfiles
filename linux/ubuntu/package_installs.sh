@@ -25,6 +25,17 @@ echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/githu
 sudo nala update
 sudo nala install gh
 
+
+## RUST INSTALL
+### Essentails and Cargo	
+sudo apt install build-essential cmake
+curl https://sh.rustup.rs -sSf | sh
+### Packages
+cargo install ripgrep 
+cargo install --locked zoxide bat
+# curl -sS https://raw.githubusercontent.com/ajeetdsouza/zoxide/main/install.sh | bash
+
+
 ## SERVER APPS
 read -p "Do you want to install Server sercurity and apps: y/N " SERVER
 if [ $SERVER == "y" ]; then
@@ -55,17 +66,6 @@ if [ $SERVER == "y" ]; then
     ## Auto Update
     sudo dpkg-reconfigure --priority=low unattended-upgrades
 fi
-
-
-## RUST INSTALL
-### Essentails and Cargo	
-sudo apt install build-essential cmake
-curl https://sh.rustup.rs -sSf | sh
-### Packages
-cargo install ripgrep 
-cargo install --locked zoxide bat
-# curl -sS https://raw.githubusercontent.com/ajeetdsouza/zoxide/main/install.sh | bash
-
 
 ## GUI APPS
 read -p "Do you want to install GUI apps: y/N " GUI_APPS
