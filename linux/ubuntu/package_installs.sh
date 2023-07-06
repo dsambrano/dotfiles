@@ -14,6 +14,8 @@ sudo nala install build-essential \
 	nginx \
 	openssh-server \
 	autojump \
+	python3-pip \
+	nodejs npm \
 	neofetch
 
 ## Github
