@@ -19,6 +19,5 @@ echo "eval `dircolors ~/.dir_colors/dircolors`" >> ~/.zshrc
 # Add "eval `dircolors /path/to/dircolorsdb`" in your shell configuration file (.bashrc, .zshrc, etc...) to use new dircolors.
 
 # Switch Default Shell to ZSH
-sudo apt install zsh
 chsh -s $(which zsh)
 

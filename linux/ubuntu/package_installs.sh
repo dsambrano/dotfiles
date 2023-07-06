@@ -15,7 +15,8 @@ sudo nala install -y build-essential \
 	openssh-server \
 	autojump \
 	python3-pip \
-	neofetch
+	neofetch \
+	zsh
 
 ## Github
 curl -fsSL https://cli.github.com/packages/githubcli-archive-keyring.gpg | sudo dd of=/usr/share/keyrings/githubcli-archive-keyring.gpg
