@@ -1,12 +1,12 @@
 #!/usr/env/bin bash
 
-read -p "Would you like to install GUI apps installed or is this a server only: [server]/gui/all" GUI
+read -p "Would you like to install GUI apps installed or is this a server only? [server]/gui/all: " GUI
 GUI=${GUI:-server}
 
 # INSTALL
 sudo apt update && sudo apt upgrade
-sudo apt install nala #nala-legacy on older than 22.04 # https://youtu.be/oroSkR4Nn_w https://christitus.com/stop-using-apt/
-sudo nala install build-essential \
+sudo apt install nala -y #nala-legacy on older than 22.04 # https://youtu.be/oroSkR4Nn_w https://christitus.com/stop-using-apt/
+sudo nala install -y build-essential \
 	git \
 	unattended-upgrades \
 	hollywood \
