@@ -47,6 +47,16 @@ if [ $SERVER == "y" ]; then
 fi
 
 
+## RUST INSTALL
+### Essentails and Cargo	
+sudo apt install build-essential cmake
+curl https://sh.rustup.rs -sSf | sh
+### Packages
+cargo install ripgrep 
+cargo install --locked zoxide bat
+# curl -sS https://raw.githubusercontent.com/ajeetdsouza/zoxide/main/install.sh | bash
+
+
 ## GUI APPS
 read -p "Do you want to install GUI apps: y/N " GUI_APPS
 if [ $GUI_APPS == "y" ]; then
