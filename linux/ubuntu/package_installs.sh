@@ -16,56 +16,63 @@ sudo nala update
 sudo nala install gh
 
 ## SERVER APPS
-### Nginx
-. /etc/os-release
-deb https://nginx.org/packages/ubuntu/ $VERSION_CODENAME nginx
-deb-src https://nginx.org/packages/ubuntu/ $VERSION_CODENAME nginx
-sudo nala update
-sudo nala install nginx
-https://www.deb-multimedia.org/dists/testing/main/binary-amd64/package/mpv
-#### Open relevant ports
-sudo ufw allow nginx 
-sudo ufw allow https
-sudo systemctl start nginx
-sudo systemctl enable nginx
+read -p "Do you want to install Server sercurity and apps: y/N " SERVER
+if [ $SERVER == "y" ]; then
+    ### Nginx
+    . /etc/os-release
+    deb https://nginx.org/packages/ubuntu/ $VERSION_CODENAME nginx
+    deb-src https://nginx.org/packages/ubuntu/ $VERSION_CODENAME nginx
+    sudo nala update
+    sudo nala install nginx
+    https://www.deb-multimedia.org/dists/testing/main/binary-amd64/package/mpv
+
+    #### Open relevant ports
+    sudo ufw allow nginx 
+    sudo ufw allow https
+    sudo systemctl start nginx
+    sudo systemctl enable nginx
+
+    ## SERVER CONFIG
+    ## UFW (uncomplicated firewall)
+    sudo ufw allow ssh
+    sudo ufw enable
+    sudo ufw status
+
+    ## SSH
+    sudo systemctl enable ssh
+    sudo systemctl start ssh
+
+    ## Auto Update
+    sudo dpkg-reconfigure --priority=low unattended-upgrades
+fi
+
 
 ## GUI APPS
-sudo nala install mpv
-### Brave Browser
-sudo curl -fsSLo /usr/share/keyrings/brave-browser-archive-keyring.gpg https://brave-browser-apt-release.s3.brave.com/brave-browser-archive-keyring.gpg
-echo "deb [signed-by=/usr/share/keyrings/brave-browser-archive-keyring.gpg arch=amd64] https://brave-browser-apt-release.s3.brave.com/ stable main"|sudo tee /etc/apt/sources.list.d/brave-browser-release.list
-sudo nala install brave-browser
+read -p "Do you want to install GUI apps: y/N " GUI_APPS
+if [ $GUI_APPS == "y" ]; then
+    sudo nala install mpv
+    ### Brave Browser
+    sudo curl -fsSLo /usr/share/keyrings/brave-browser-archive-keyring.gpg https://brave-browser-apt-release.s3.brave.com/brave-browser-archive-keyring.gpg
+    echo "deb [signed-by=/usr/share/keyrings/brave-browser-archive-keyring.gpg arch=amd64] https://brave-browser-apt-release.s3.brave.com/ stable main"|sudo tee /etc/apt/sources.list.d/brave-browser-release.list
+    sudo nala install brave-browser
+    
+    ### Firefox
+    sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys A6DCF7707EBC211F
+    sudo apt-add-repository "deb http://ppa.launchpad.net/ubuntu-mozilla-security/ppa/ubuntu focal main"
+    sudo nala update
+    sudo nala install firefox
 
-### Firefox
-sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys A6DCF7707EBC211F
-sudo apt-add-repository "deb http://ppa.launchpad.net/ubuntu-mozilla-security/ppa/ubuntu focal main"
-sudo nala update
-sudo nala install firefox
-
-### Anime Terminal
-curl "https://raw.githubusercontent.com/whoisYoges/anime-terminal/master/anime-terminal" > anime-terminal
-chmod +x anime-terminal
-sudo mv anime-terminal /usr/local/bin/
-#### man page
-curl "https://raw.githubusercontent.com/whoisYoges/anime-terminal/master/anime-terminal.1" > anime-terminal.1
-sudo mv anime-terminal.1 /usr/share/man/man1/
+    ### Anime Terminal
+    curl "https://raw.githubusercontent.com/whoisYoges/anime-terminal/master/anime-terminal" > anime-terminal
+    chmod +x anime-terminal
+    sudo mv anime-terminal /usr/local/bin/
+    #### man page
+    curl "https://raw.githubusercontent.com/whoisYoges/anime-terminal/master/anime-terminal.1" > anime-terminal.1
+    sudo mv anime-terminal.1 /usr/share/man/man1/
+fi
 
 
 
-
-
-# CONFIG
-## UFW (uncomplicated firewall)
-sudo ufw allow ssh
-sudo ufw enable
-sudo ufw status
-
-## SSH
-sudo systemctl enable ssh
-sudo systemctl start ssh
-
-## Auto Update
-sudo dpkg-reconfigure --priority=low unattended-upgrades
 
 
 
