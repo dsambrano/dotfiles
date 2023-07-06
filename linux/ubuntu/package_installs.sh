@@ -45,6 +45,13 @@ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash
 #nvm install node
 
 
+## NVIM
+curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim.appimage
+chmod u+x nvim.appimage
+mv squashfs-root nvim-squashfs-root
+sudo mv nvim-squashfs-root /
+sudo ln -s /nvim-squashfs-root/AppRun /usr/bin/nvim
+
 ## SERVER APPS
 read -p "Do you want to install Server sercurity and apps: y/N " SERVER
 SERVER=${SERVER:-n}
