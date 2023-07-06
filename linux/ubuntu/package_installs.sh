@@ -6,7 +6,15 @@ GUI=${GUI:-server}
 # INSTALL
 sudo apt update && sudo apt upgrade
 sudo apt install nala #nala-legacy on older than 22.04 # https://youtu.be/oroSkR4Nn_w https://christitus.com/stop-using-apt/
-sudo nala install build-essential git unattended-upgrades hollywood cmatrix nginx openssh-server autojump neofetch
+sudo nala install build-essential \
+	git \
+	unattended-upgrades \
+	hollywood \
+	cmatrix \
+	nginx \
+	openssh-server \
+	autojump \
+	neofetch
 
 ## Github
 curl -fsSL https://cli.github.com/packages/githubcli-archive-keyring.gpg | sudo dd of=/usr/share/keyrings/githubcli-archive-keyring.gpg
