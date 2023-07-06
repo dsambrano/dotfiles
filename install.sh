@@ -53,17 +53,6 @@ source ./$OS_DIR/os_configs.sh
 export PATH="$HOME/.cargo/bin:$PATH"
 export RIPGREP_CONFIG_PATH=$HOME/.config/ripgrep/.ripgreprc
 
-# Authorize GitHub
-gh auth login
-
-## Setting up git repos:
-mkdir -p ~/git_repos/
-cd ~/git_repos/
-repos={dotfiles,code_samples}
-for i in $repos; do
-    git clone git@github.com:dsambrano/$i.git
-done
-cd -
 
 # Tmux plugin manager
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
@@ -78,6 +67,17 @@ nvim --headless -c 'autocmd User PackerComplete quitall' -c 'PackerSync'
 # Sym links require the clone of the main repo first to work. 
 source ./symlinks.sh $OS_DIR
 
+# Authorize GitHub
+gh auth login
+
+## Setting up git repos:
+mkdir -p ~/git_repos/
+cd ~/git_repos/
+repos={dotfiles,code_samples}
+for i in $repos; do
+    git clone git@github.com:dsambrano/$i.git
+done
+cd -
 
 ## Conditionals. This is where I would set up things like the GoXLR and smashbox/gaming setup etc
 read -p "Would you like to install Anime-Terminal to download/stream anime with CLI: [Y/n] ? " anime
