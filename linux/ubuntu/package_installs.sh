@@ -35,6 +35,16 @@ cargo install ripgrep
 cargo install --locked zoxide bat
 # curl -sS https://raw.githubusercontent.com/ajeetdsouza/zoxide/main/install.sh | bash
 
+## NPM / NODE
+### Might need to be moved to ensure it is installed only after the .zshrc has been created or need to ensure it is also there.
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash
+
+# Appears new install adds automatically
+# export NVM_DIR="$HOME/.nvm"
+# [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+# [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completioh
+nvm install node
+
 
 ## SERVER APPS
 read -p "Do you want to install Server sercurity and apps: y/N " SERVER
