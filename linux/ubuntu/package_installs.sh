@@ -14,7 +14,7 @@ sudo nala install -y build-essential \
 	nginx \
 	openssh-server \
 	autojump \
-	python3-pip \
+	python3-pip python3-venv \
 	neofetch \
 	zsh
 
