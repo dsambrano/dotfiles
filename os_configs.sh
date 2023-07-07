@@ -84,10 +84,10 @@ echo """Host *
     UseKeychain yes
     AddKeysToAgent yes
 
-Host template
-    Hostname 192.168.1.69
-    Port 69420
-    IdentityFile ~/.ssh/id_rsa
+# Host template
+#     Hostname 192.168.1.69
+#     Port 69420
+#     IdentityFile ~/.ssh/id_rsa
 
 """ >> ~/.ssh/config
 
