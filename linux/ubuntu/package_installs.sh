@@ -31,7 +31,7 @@ sudo nala install gh
 sudo apt install build-essential cmake
 curl https://sh.rustup.rs -sSf | sh
 ### Packages
-cargo install ripgrep 
+cargo install ripgrep lsd git-delta
 cargo install --locked zoxide bat
 # curl -sS https://raw.githubusercontent.com/ajeetdsouza/zoxide/main/install.sh | bash
 
@@ -44,6 +44,10 @@ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash
 # [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 # [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completioh
 #nvm install node
+
+## FZF
+git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
+~/.fzf/install
 
 
 ## NVIM
