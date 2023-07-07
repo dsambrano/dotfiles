@@ -16,9 +16,9 @@ lsp.ensure_installed({
     "html",
     "cssls",
 	"rust_analyzer",
-	"sumneko_lua",
+	"lua_ls",
 })
-lsp.configure("sumneko_lua", {
+lsp.configure("lua_ls", {
     settings = {
         Lua = {
             diagnostics = {
