@@ -15,6 +15,7 @@ git config --global core.editor "nvim" # Use Nvim as default editor: https://sta
 # Evaluate Zoxide for Modern CD:
 eval "$(zoxide init zsh)"
 
+
 # Install oh-my-zsh
 if [ ! -d "$HOME/.oh-my-zsh" ]; then
     sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
@@ -52,8 +53,9 @@ install_fonts() { # Taken from: https://apple.stackexchange.com/a/321938
     cd -
 }
 
-for i in {Regular,Bold,Italic,"Bold Italic"}; do
-    install_fonts "MesloLGS" "https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS NF ${i}.ttf"
+
+for i in {Regular,Bold,Italic,"Bold%20Italic"}; do
+    install_fonts "MesloLGS" "https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20${i}.ttf"
 done
 ## Update fonts cache
 fc-cache -v
