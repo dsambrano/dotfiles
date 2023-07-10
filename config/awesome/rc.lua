@@ -286,13 +286,13 @@ globalkeys = gears.table.join(
         { description = "go back", group = "client" }),
 
     -- Standard program
-    awful.key({ modkey, }, "Return", function() awful.spawn(terminal) end,
+    awful.key({ modkey }, "Return", function() awful.spawn(terminal) end,
         { description = "open a terminal", group = "launcher" }),
     awful.key({ modkey, "Mod1" }, "l", function() awful.spawn("i3lock -c 000000") end,
         { description = "Lock Screen with i3lock", group = "awesome" }),
     awful.key({ modkey }, "o", awful.client.movetoscreen ,
         { description = "Move to screen", group = "awesome" }),
-    awful.key({ modkey, }, "b", function() awful.spawn("brave-browser") end,
+    awful.key({ modkey }, "b", function() awful.spawn("brave-browser") end,
         { description = "Open Brave Browser", group = "launcher" }),
     awful.key({ modkey, "Control" }, "r", awesome.restart,
         { description = "reload awesome", group = "awesome" }),
