@@ -1,4 +1,9 @@
 vim.g.vimtex_view_method = 'zathura' -- zathura for Linux; skim for MacOS
+-- vim.g.vimtex_view_general_options = {
+    -- options = {
+        -- "@pdf" = vim.fn.expand("%:t:r")..
+    -- }
+-- }
 
 -- Sources:
 --        https://stackoverflow.com/a/2842811
