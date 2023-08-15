@@ -52,6 +52,10 @@ sudo dnf install -y \
     ranger \
     texlive-scheme-basic latexmk texlive-datetime texlive-fontaxes texlive-hyphenat texlive-mathdesign texlive-noto texlive-preprint texlive-tabu texlive-tex4ht zathura zathura-plugins-all xdotool\
     ocrmypdf \
+    anthy
+
+# For JP keyboard option you need to adjust ibus setup 
+# ibus-setup
 
 # Need to add to path for zoxide:
 eval "$(zoxide init zsh)"
