@@ -9,6 +9,11 @@ vim.api.nvim_create_autocmd(
     { "BufRead", "BufNewFile" },
     { pattern = { "*.txt", "*.md", "*.tex", "*.html"}, command = "setlocal spell" }
 )
+-- -- Auto start MarkdownPreview
+-- vim.api.nvim_create_autocmd(
+    -- { "BufRead", "BufNewFile" },
+    -- { pattern = { "*.md" }, command = "MarkdownPreview" }
+-- )
 -- When I closing a text file
 vim.api.nvim_create_autocmd(
     { "ExitPre"},
