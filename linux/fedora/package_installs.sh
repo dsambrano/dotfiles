@@ -105,6 +105,6 @@ flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flat
 flatpak remote-modify --enable flathub
 
 ## Installing Flatpak Apps
-flatpak install flathub com.slack.Slack com.spotify.Client # net.davidotek.pupgui2 #(previous one is for protonup-qt) com.brave.Browser
+flatpak install flathub com.slack.Slack com.spotify.Client net.ankiweb.Anki # net.davidotek.pupgui2 #(previous one is for protonup-qt) com.brave.Browser
 # Other potential useful software dev tools: 
 # - rest.insomnia.Insomnia: Insomnia for web dev/ head testing info
