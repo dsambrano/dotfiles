@@ -80,8 +80,8 @@ gh auth login
 ## Setting up git repos:
 mkdir -p ~/git_repos/
 cd ~/git_repos/
-repos={dotfiles,code_samples}
-for i in $repos; do
+repos=(dotfiles code_samples)
+for i in "${repos[@]}"; do
     git clone git@github.com:dsambrano/$i.git
 done
 cd -
