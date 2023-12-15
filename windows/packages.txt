@@ -1,0 +1,53 @@
+alacritty
+# anaconda3  # Can take awhile
+anki
+audacity
+brave
+cpu-z
+discord
+docker-desktop
+epicgameslauncher
+firefox
+git.install
+gh
+googlechrome
+goxlr
+hwmonitor
+mpv
+msiafterburner
+obs-studio
+powertoys
+python
+pyenv-win
+r.studio
+skype
+slack
+# spotify # sometime gets hung up
+steam
+texmaker
+virtualbox
+vlc
+# voicemeeter-banana # Don't install in automated script because requires user input
+vscode
+wsl
+zoom
+7zip.install
+
+
+# Packages Not on Chocolately
+# Snap Camera
+# SmashBox
+# iVCam
+# Logitech G HUB
+# Reaper
+# Synology Assistant
+# QuiteRSS
+# 4k Video Downloader # jk 4k-video-downloader
+# 4k YouTube to MP3 # jk 4k-youtube-to-mp3
+# Reaper
+# GSkill Trident Z control (RAM)
+# iCue (lighting)
+# RGB Fusion ( lighting)
+# Stream Deck
+
+
