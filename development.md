@@ -1,5 +1,13 @@
 # Development Plan
 
+Another To-Do from Clean Ubuntu (12/12/23)
+-[] Add my custom functions like the tmux-sessionizer etc.
+-[] Add `rbenv` to installs
+-[] Try to make the installs more compartmentalized where they only do the ones that have to be done with the Distro's package manager, if it done with cargo, or anything it should be in the general install section (just go through and separate them more)
+-[] Make more options for running it (e.g., ubunutu desktop vs server) I want to have gui apps completely separate so that can be installed only where relevent
+-[] There were some things that I ran and didnt work on first attempt but then didnt change anything and they worked... Could just be from the weird pasting on windows so just confirm (nvim and tmux come to mind)
+-[] I should probably find a way to not have to rerun powerlevels10k each time. Just install and move over the `.zshrc` / `powerlevels10k` files, I think that is a better idea.
+
 ## To Do list:
 
 -[] Need to move the config files to base dir and have them all source those 
