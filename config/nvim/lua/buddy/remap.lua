@@ -32,3 +32,58 @@ vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><
 vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true , desc = "chmod of Current file to e[X]ecution Privliges" })
 
 
+
+
+
+
+
+
+
+
+-- Python Script Running
+function find_git_root(path)
+    local git_root = vim.fn.systemlist("git -C " .. vim.fn.shellescape(path) .. " rev-parse --show-toplevel")[1]
+    if vim.v.shell_error == 0 and git_root ~= "" then
+        return git_root
+    else
+        return nil -- No .git root found, or an error occurred
+    end
+end
+
+
+function run_python_script()
+    -- Get the current file path
+    local current_file = vim.fn.expand('%')
+    -- Find the project root by locating the .git directory
+    local project_root = find_git_root(vim.fn.expand('%:p:h'))
+    if not project_root then
+    project_root = vim.fn.expand('%:p:h') -- Default to current file directory if no git root found
+    end
+
+    -- Try to find the virtual environment in the project root or its parent directory
+    local venv_path = ''
+    if vim.fn.isdirectory(project_root .. '/venv') == 1 then
+        venv_path = project_root .. '/venv'
+    elseif vim.fn.isdirectory(project_root .. '/../venv') == 1 then
+        venv_path = project_root .. '/../venv'
+    end
+
+    -- Construct the command to activate the venv and run the script
+    local cmd = 'split | term '
+    if venv_path ~= '' then
+        cmd = cmd .. 'source ' .. venv_path .. '/bin/activate && '
+    end
+    cmd = cmd .. 'python ' .. current_file
+
+    -- Execute the command in a new split terminal
+    vim.cmd(cmd)
+
+    -- Enter insert mode in the terminal (optional, if you want to immediately start typing)
+    vim.cmd('startinsert')
+end
+
+
+-- Run Python Script Shortcut
+-- Map the function to a shortcut, e.g., <F5>
+vim.api.nvim_set_keymap('n', '<F5>', ':lua run_python_script()<CR>', { noremap = true, silent = true })
+
