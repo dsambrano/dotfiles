@@ -79,7 +79,9 @@ function run_python_script()
     vim.cmd(cmd)
 
     -- Enter insert mode in the terminal (optional, if you want to immediately start typing)
-    vim.cmd('startinsert')
+    -- vim.cmd('startinsert')
+    vim.cmd("normal G")
+    -- vim.api.nvim_feedkeys(vim.api.nvim_replace_termcodes('<C-\\><C-n>', true, true, true), 'n', true)
 end
 
 
