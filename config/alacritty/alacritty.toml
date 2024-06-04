@@ -1,0 +1,35 @@
+import = ["/Users/dsambrano/.config/alacritty/theme_imports.toml", "/Users/dsambrano/.config/alacritty/decorations.toml"]
+live_config_reload = true
+
+[font]
+size = 20
+[font.normal]
+family = "MesloLGS NF"
+
+[[keyboard.bindings]]
+action = "SpawnNewInstance"
+key = "N"
+mods = "Control"
+
+[[keyboard.bindings]]
+action = "ToggleFullscreen"
+key = "Return"
+mods = "Control"
+
+[[mouse.bindings]]
+action = "PasteSelection"
+mouse = "Middle"
+
+[selection]
+save_to_clipboard = true
+
+[window]
+decorations_theme_variant = "Dark"
+opacity = 0.85
+
+[window.dimensions]
+columns = 80
+lines = 25
+
+[cursor]
+style = {shape="Beam"}
