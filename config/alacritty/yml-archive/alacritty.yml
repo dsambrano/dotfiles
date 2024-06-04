@@ -901,3 +901,11 @@ key_bindings:
 import:
   - ~/.config/alacritty/theme_imports.yml
   - ~/.config/alacritty/decorations.yml
+  - ~/.config/alacritty/themes/omni.yml
+  - ~/.config/alacritty/themes/wolf.yml
+  - ~/.config/alacritty/themes/dracula.yml
+  - ~/.config/alacritty/themes/purples.yml
+  - ~/.config/alacritty/themes/night_sky.yml
+  - ~/.config/alacritty/themes/dragon_ball.yml
+  - ~/.config/alacritty/themes/challenger-deep.yml
+  - ~/.config/alacritty/themes/ship_lake_purple.yml
