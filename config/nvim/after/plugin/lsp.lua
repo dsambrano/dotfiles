@@ -9,15 +9,25 @@ lsp.preset('recommended')
 -- Still need to find a way to auto install my preferred ones, but here is a start.
 -- nvim --headless -c "MasonInstall lua-language-server rust-analyzer" -c qall
 -- vim.cmd("MasonInstall black pydocstyle")
-lsp.ensure_installed({
-	-- "black",
-        -- "pydocstyle",
+-- lsp.ensure_installed({
+	-- -- "black",
+        -- -- "pydocstyle",
+	-- "pyright",
+    -- "html",
+    -- "cssls",
+	-- "rust_analyzer",
+	-- "lua_ls",
+-- })
+require('mason').setup({})
+require("mason-lspconfig").setup({
+    ensure_installed={
 	"pyright",
     "html",
     "cssls",
 	"rust_analyzer",
-	"lua_ls",
+	"lua_ls"},
 })
+
 lsp.configure("lua_ls", {
     settings = {
         Lua = {
@@ -37,20 +47,58 @@ lsp.use("pyright", {
 	}
 })
 local cmp = require("cmp")
+local cmp_action = require('lsp-zero').cmp_action()
+local cmp_format = require('lsp-zero').cmp_format()
 -- local cmp_mappings = lsp.defaults.cmp_mappings({
 --     ["<CR>"] = cmp.mapping.confirm({ select = false })
 -- })
-lsp.setup_nvim_cmp({
+-- lsp.setup_nvim_cmp({
+    -- -- completion = { keyword_length = 1 },
+    -- preselect = cmp.PreselectMode.None,
+    -- completion = {
+        -- completeopt = 'menu,menuone,noinsert,noselect'
+    -- },
+    -- sources = {
+        -- {name = 'path'},
+        -- {name = 'nvim_lsp', keyword_length = 3},
+        -- {name = 'buffer', keyword_length = 3},
+        -- {name = 'luasnip', keyword_length = 2},
+    -- }
+-- })
+cmp.setup({
     -- completion = { keyword_length = 1 },
     preselect = cmp.PreselectMode.None,
     completion = {
         completeopt = 'menu,menuone,noinsert,noselect'
     },
+    formatting = cmp_format,
     sources = {
         {name = 'path'},
         {name = 'nvim_lsp', keyword_length = 3},
         {name = 'buffer', keyword_length = 3},
         {name = 'luasnip', keyword_length = 2},
+    },
+    mapping = cmp.mapping.preset.insert({
+        -- confirm completion item
+        ['<CR>'] = cmp.mapping.confirm({select = false}),
+
+        -- toggle completion menu
+        ['<C-e>'] = cmp_action.toggle_completion(),
+
+        -- tab complete
+        ['<Tab>'] = cmp_action.tab_complete(),
+        ['<S-Tab>'] = cmp.mapping.select_prev_item(),
+
+        -- navigate between snippet placeholder
+        ['<C-d>'] = cmp_action.luasnip_jump_forward(),
+        ['<C-b>'] = cmp_action.luasnip_jump_backward(),
+
+        -- scroll documentation window
+        ['<C-f>'] = cmp.mapping.scroll_docs(-5),
+        ['<C-d>'] = cmp.mapping.scroll_docs(5),
+    }),
+    window = {
+        documentation = cmp.config.window.bordered(),
     }
 })
 -- From: https://youtu.be/w7i4amO_zaE?t=1158
