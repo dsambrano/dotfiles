@@ -22,6 +22,7 @@ require('mason').setup({})
 require("mason-lspconfig").setup({
     ensure_installed={
 	"pyright",
+    -- "mypy",
     "html",
     "cssls",
 	"rust_analyzer",
@@ -49,22 +50,10 @@ lsp.use("pyright", {
 local cmp = require("cmp")
 local cmp_action = require('lsp-zero').cmp_action()
 local cmp_format = require('lsp-zero').cmp_format()
--- local cmp_mappings = lsp.defaults.cmp_mappings({
---     ["<CR>"] = cmp.mapping.confirm({ select = false })
--- })
--- lsp.setup_nvim_cmp({
-    -- -- completion = { keyword_length = 1 },
-    -- preselect = cmp.PreselectMode.None,
-    -- completion = {
-        -- completeopt = 'menu,menuone,noinsert,noselect'
-    -- },
-    -- sources = {
-        -- {name = 'path'},
-        -- {name = 'nvim_lsp', keyword_length = 3},
-        -- {name = 'buffer', keyword_length = 3},
-        -- {name = 'luasnip', keyword_length = 2},
-    -- }
--- })
+
+-- Load LuaSnip
+require("luasnip.loaders.from_vscode").lazy_load()
+
 cmp.setup({
     -- completion = { keyword_length = 1 },
     preselect = cmp.PreselectMode.None,
@@ -90,7 +79,7 @@ cmp.setup({
         ['<S-Tab>'] = cmp.mapping.select_prev_item(),
 
         -- navigate between snippet placeholder
-        ['<C-d>'] = cmp_action.luasnip_jump_forward(),
+        ['<C-;>'] = cmp_action.luasnip_jump_forward(),
         ['<C-b>'] = cmp_action.luasnip_jump_backward(),
 
         -- scroll documentation window
@@ -137,13 +126,14 @@ lsp.on_attach(function(client, bufnr)
   end
 
   vim.keymap.set("n", "gd", vim.lsp.buf.definition, opts)
+  vim.keymap.set("n", "gD", vim.lsp.buf.declaration, opts)
   vim.keymap.set("n", "K", vim.lsp.buf.hover, opts)
   vim.keymap.set("n", "<leader>vws", vim.lsp.buf.workspace_symbol, opts)
   vim.keymap.set("n", "<leader>vd", vim.diagnostic.open_float, opts)
   vim.keymap.set("n", "[d", vim.diagnostic.goto_next, opts)
   vim.keymap.set("n", "]d", vim.diagnostic.goto_prev, opts)
   vim.keymap.set("n", "<leader>vca", vim.lsp.buf.code_action, opts)
-  vim.keymap.set("n", "<leader>vrr", vim.lsp.buf.references, opts)
+  vim.keymap.set("n", "gr", vim.lsp.buf.references, opts)
   vim.keymap.set("n", "<leader>vrn", vim.lsp.buf.rename, opts)
   vim.keymap.set("i", "<C-h>", vim.lsp.buf.signature_help, opts)
 end)
