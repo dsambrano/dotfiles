@@ -66,6 +66,7 @@ brew install --cask r \
                     edex-ui \
                     itsycal \
                     insomnia \
+                    scroll-reverser \
                     # openconnect-gui vnc-viewer
 
 

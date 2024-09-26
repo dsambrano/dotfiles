@@ -91,6 +91,7 @@ echo """Host *
 
 """ >> ~/.ssh/config
 
+echo 'eval "$(zoxide init zsh)"' >> ~/.zshrc
 # Exports which need to be added to my ~/.zshrc file:
 echo 'export PATH="$HOME/.cargo/bin:$PATH"' >> ~/.zshrc
 echo "export RIPGREP_CONFIG_PATH=$HOME/.config/ripgrep/.ripgreprc" >> ~/.zshrc
