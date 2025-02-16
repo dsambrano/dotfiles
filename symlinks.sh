@@ -49,7 +49,7 @@ ln -s ~/git_repos/dotfiles/config/ripgrep ~/.config
 ln -s ~/git_repos/dotfiles/config/kitty/ ~/.config
 
 # Alacritty Config:
-mv $OS_DIR/decorations.yml ~/git_repos/config/alacritty/
+mv $OS_DIR/decorations.toml ~/git_repos/config/alacritty/
 ln -s ~/git_repos/dotfiles/config/alacritty ~/.config
 
 # Gitignore Global

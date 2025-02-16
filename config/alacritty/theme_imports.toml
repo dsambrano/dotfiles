@@ -1,1 +1,2 @@
-import = ["/Users/dsambrano/.config/alacritty/themes/dracula.toml.toml", "/Users/dsambrano/.config/alacritty/decorations.toml"]
+[general]
+import = ["~/.config/alacritty/themes/pywal.toml"]
