@@ -60,6 +60,7 @@ awful.spawn.with_shell("picom -b")
 awful.spawn.with_shell("setxkbmap -option \"caps:swapescape\"")
 -- Gives me a Random WallPaper and Alacritty Theme on Start
 awful.spawn.with_shell("/usr/bin/bash /home/buddy/git_repos/local_functions/shell/change_theme.sh")
+awful.spawn.with_shell("xrandr --output DP-2 --mode 2560x1440 --rate 180")
 awful.spawn.with_shell("ibus-daemon --daemonize --replace &")
 -- Adding gaps: https://www.reddit.com/r/awesomewm/comments/g7b3bq/comment/fog1or1/?utm_source=share&utm_medium=web2x&context=3
 beautiful.gap_single_client = true
