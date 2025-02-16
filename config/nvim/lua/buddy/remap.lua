@@ -32,6 +32,50 @@ vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><
 vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true , desc = "chmod of Current file to e[X]ecution Privliges" })
 
 
+-- Navigate to the previous hunk
+vim.api.nvim_set_keymap('n', '[c', '<Plug>(signify-prev-hunk)', {desc = "Move to Previous Git [C]hange" })
+
+-- Navigate to the next hunk
+vim.api.nvim_set_keymap('n', ']c', '<Plug>(signify-next-hunk)', {desc = "Move to Next Git [C]hange" })
+
+
+
+-- More of a heads up 
+-- [], [[, ][, and ]] are not prev/next start/end
+-- instead both correspond to foward/backwards e.g.,
+-- [[ -previous start
+-- [] -previous end
+-- ][ -next/current end
+-- ]] -next start
+-- to flip use:
+-- -- Keep the original behavior for ]] and [[
+-- vim.keymap.set('n', ']]', function()
+    -- vim.fn.search('end\\|{', 'W') -- next start
+-- end, { silent = true })
+
+-- vim.keymap.set('n', '[[', function()
+    -- vim.fn.search('function\\|{', 'bW') -- previous start
+-- end, { silent = true })
+
+-- -- Flip the behavior of ][ and []
+-- vim.keymap.set('n', '][', function()
+    -- vim.fn.search('function\\|}', 'W') -- next start
+-- end, { silent = true })
+
+-- vim.keymap.set('n', '[]', function()
+    -- vim.fn.search('end\\|}', 'bW') -- previous end
+-- end, { silent = true })
+
+
+-- Mapping to go to the next quickfix item using ]q
+vim.api.nvim_set_keymap('n', ']q', ':cnext<CR>', { noremap = true, silent = true, desc = "Next [Q]uickfix item"})
+
+-- Mapping to go to the previous quickfix item using [q
+vim.api.nvim_set_keymap('n', '[q', ':cprev<CR>', { noremap = true, silent = true, desc = "Prev [Q]uickfix item"})
+
+-- Mapping to close the quickfix window using qq
+vim.api.nvim_set_keymap('n', 'cq', ':cclose<CR>', { noremap = true, silent = true, desc = "Close [Q]uickfix item"})
+
 
 
 
