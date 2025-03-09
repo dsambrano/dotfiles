@@ -22,6 +22,13 @@ read -p "What OS are you using? [Mac/Ubuntu/Fedora] " OS
 # 	Darwin*) player_fn='iina';;
 # 	*) player_fn='mpv';;
 # esac
+
+git config --global init.defaultBranch main
+git config --global --add --bool push.autoSetupRemote true
+git config --global core.pager delta
+git config --global interactive.diffFilter 'delta --color-only'
+git config --global delta.navigate true
+git config --global merge.conflictStyle zdiff3
 if [ $OS  == "Mac" ]; then
     OS_DIR=mac
 fi
