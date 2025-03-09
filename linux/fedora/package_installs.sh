@@ -10,6 +10,10 @@ sudo dnf install \
 
 sudo dnf update -y
 
+# Copr Repos
+sudo dnf copr enable solopasha/hyprland
+sudo dnf copr enable erikreider/SwayNotificationCenter
+
 # Should probs move to https://www.rust-lang.org/tools/install for rust specifically
 sudo dnf install -y \
     git \
@@ -42,6 +46,7 @@ sudo dnf install -y \
     qpwgraph \
     dconf \
     wine winetricks \
+    hyprland hyprlock hyprshot hyprpaper hypridle hyprpicker waybar SwayNotificationCenter SwayNotificationCenter-git\
     rstudio-desktop R libjpeg-turbo-devel libcurl-devel.x86_64\
     cmake \
     clang clang-devel llvm-devel \
