@@ -22,13 +22,18 @@ sudo dnf install -y \
     'dnf-command(config-manager)' \
     zsh \
     neovim \
+    fzf \
+    tmux \
     bat \
     fastfetch \
     htop \
-    fzf \
+    duf \
+    zoxide \
+    fd-find \
+    ripgrep \
+    tldr \
     cmatrix \
     nmap \
-    tldr \
     rust cargo \
     mpv \
     aria2 \
@@ -37,11 +42,6 @@ sudo dnf install -y \
     qpwgraph \
     dconf \
     wine winetricks \
-    duf \
-    zoxide \
-    fd-find \
-    ripgrep \
-    tmux \
     rstudio-desktop R libjpeg-turbo-devel libcurl-devel.x86_64\
     cmake \
     clang clang-devel llvm-devel \
