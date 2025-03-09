@@ -56,6 +56,7 @@ sudo dnf install -y \
     ranger \
     texlive-scheme-basic latexmk texlive-datetime texlive-fontaxes texlive-hyphenat texlive-mathdesign texlive-noto texlive-preprint texlive-tabu texlive-tex4ht zathura zathura-plugins-all xdotool\
     ocrmypdf \
+    fcitx5-anthy \
     anthy
 
 
