@@ -13,6 +13,7 @@ sudo dnf update -y
 # Should probs move to https://www.rust-lang.org/tools/install for rust specifically
 sudo dnf install -y \
     git \
+    stow \
     npm \
     nodejs \
     wget \
