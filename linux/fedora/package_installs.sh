@@ -54,10 +54,20 @@ sudo dnf install -y \
     libwebp-tools \
     gstreamer1-libav \
     ranger \
-    texlive-scheme-basic latexmk texlive-datetime texlive-fontaxes texlive-hyphenat texlive-mathdesign texlive-noto texlive-preprint texlive-tabu texlive-tex4ht zathura zathura-plugins-all xdotool\
     ocrmypdf \
     fcitx5-anthy \
     anthy
+
+optional_install(){
+    read -t 5 -p "Would you like to install $1: y[N]\n" input
+    if [ $? -gt 128 ]; then
+        echo "Timeout occurred, no input received."
+    else
+        echo "Input received: $input"
+        sudo dnf install "${@:2}"
+    fi
+}
+optional_install "LaTeX (heads up its a lot)" texlive-scheme-basic latexmk texlive-datetime texlive-fontaxes texlive-hyphenat texlive-mathdesign texlive-noto texlive-preprint texlive-tabu texlive-tex4ht zathura zathura-plugins-all xdotool
 
 
 
