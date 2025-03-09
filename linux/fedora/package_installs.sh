@@ -23,7 +23,7 @@ sudo dnf install -y \
     zsh \
     neovim \
     bat \
-    neofetch \
+    fastfetch \
     htop \
     fzf \
     cmatrix \
