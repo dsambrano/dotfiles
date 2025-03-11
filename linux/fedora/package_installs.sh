@@ -94,6 +94,7 @@ export PATH="$HOME/.cargo/bin:$PATH"
 cargo install du-dust
 cargo install lsd
 cargo install git-delta
+cargo install wallust
 
 
 # Install Brave
