@@ -29,6 +29,7 @@ save_to_clipboard = true
 [window]
 decorations_theme_variant = "Dark"
 opacity = 0.9
+dynamic_title = true
 
 [window.dimensions]
 columns = 80
