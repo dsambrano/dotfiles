@@ -1,0 +1,27 @@
+# Wallust config, see docs: https://explosion-mental.codeberg.page/wallust/intro.html
+
+backend = "Wal"  #  "kmeans"
+fallback_generator = "interpolate"  # (default) interpolate "complementary"
+
+palettes = "dark16"
+
+# threshold = 10
+
+[templates]
+
+# example for RGBA: rgba({{color0}}ee) or rgba({{color0}}{{50 | alpha_hex}})
+waybar = { src = "waybar-colors.css", dst = "~/.config/waybar/colors.css" }
+# alacritty = { src = "alacritty", dst = "~/.config/waybar/colors.css" }
+# tmux = { src = "tmux_colors", dst = "~/.config/waybar/colors.css" }
+# kitty = { src = "kitty.toml", dst = "~/.config/waybar/colors.css" }
+# hyperland = { src = "hypr-colors", dst = "~/.config/waybar/colors.css" }
+
+# Example
+# # or splited in the dotted syntax
+# res.src = "xres"
+# res.dst = "~/.config/Xresources"
+
+# # old times, good times. Here I put old pywal templates.
+# # NOTE THAT BOTH scr AND dst ARE DIRECTORIES!
+# pywal = { src = "templates/", dst = '~/.cache/wal/', pywal = true }
+
