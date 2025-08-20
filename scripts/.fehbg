@@ -1,0 +1,2 @@
+#!/bin/sh
+feh --no-fehbg --bg-scale '/home/buddy/git_repos/dotfiles/wallpapers/generic/future_city.jpg' 
