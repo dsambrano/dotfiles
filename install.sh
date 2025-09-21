@@ -112,6 +112,10 @@ if [ $anime == "Y" ]; then
 fi
 
 # End script and restart 
-read -t 30 -p "The configs are complete. Although some will not be updated until the next reboot. Would you like to reboot now? [Y]/N: " restart
-restart=${restart:-N} # If parameter is unset or null, the expansion of word is substituted. Else whatever was read in
+read -t 300 -p "The configs are complete. Although some will not be updated until the next reboot. Would you like to reboot now? [Y/n]: " restart
+restart=${restart:-y} # If parameter is unset or null, the expansion of word is substituted. Else whatever was read in
+
+if [[ $answer =~ ^[yY] ]]; then
+    sudo reboot
+fi
 
