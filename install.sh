@@ -67,9 +67,14 @@ source ./$OS_DIR/os_configs.sh
 # 
     # # Symlink config files to ~/.config
     # stow -t ~/.config config
+    #
+    # Probs can just stow this as well actually
+    # mv $OS_DIR/decorations.toml ~/git_repos/config/alacritty/
     # 
     # # Symlink home files directly to ~
     # stow -t ~ home_config
+    # # Can likely also just stow the $OS_DIR aliases as well just do [ -f $OS_DIR/aliases.. ] 
+    #
     # 
     # # Symlink executables to ~/.local/bin
     # stow -t ~/.local/bin local
