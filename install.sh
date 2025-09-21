@@ -104,8 +104,8 @@ for i in "${repos[@]}"; do
 done
 cd -
 
-## Conditionals. This is where I would set up things like the GoXLR and smashbox/gaming setup etc
-read -p "Would you like to install Anime-Terminal to download/stream anime with CLI: [Y/n] ? " anime
+# ## Conditionals. This is where I would set up things like the GoXLR and smashbox/gaming setup etc
+read -t 5 -p "Would you like to install Anime-Terminal to download/stream anime with CLI: [y/N] ? " anime
 anime=${anime:-N}
 if [ $anime == "Y" ]; then
     source ./conditional_installs/anime.sh
