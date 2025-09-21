@@ -11,6 +11,14 @@ git config --global pull.rebase false # true for rebase: source for meaning: htt
 git config --global core.excludesFile "~/.gitignore_global" # https://stackoverflow.com/a/19299889
 git config --global core.editor "nvim" # Use Nvim as default editor: https://stackoverflow.com/a/2596819
 
+# Automatically create remote branches if they dont exist
+git config --global --add --bool push.autoSetupRemote true
+
+# Switch to Delta for diff
+git config --global core.pager delta
+git config --global interactive.diffFilter 'delta --color-only'
+git config --global delta.navigate true
+git config --global merge.conflictStyle zdiff3
 
 
 
