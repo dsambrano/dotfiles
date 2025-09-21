@@ -22,17 +22,25 @@ read -p "What OS are you using? [Mac/Ubuntu/Fedora] " OS
 # 	Darwin*) player_fn='iina';;
 # 	*) player_fn='mpv';;
 # esac
-if [ $OS  == "Mac" ]; then
+
+if [ -f /etc/os-release ]; then
+    # For Linux systems
+    . /etc/os-release
+    echo "OS Detected: $NAME"
+    OS_DIR="linux/$ID"
+    echo $OS_DIR
+elif command -v sw_vers > /dev/null; then
+    # For MacOS
+    echo "OS: macOS"
     OS_DIR=mac
+else
+    echo "Unknown OS: Exciting Process"
+    exit 1;
 fi
 
-if [ $OS  == "Ubuntu" ]; then
-    OS_DIR=linux/ubuntu
-fi
-
-if [ $OS  == "Fedora" ]; then
-    OS_DIR=linux/fedora
-fi
+# if [ $OS  == "Fedora" ]; then
+#     OS_DIR=linux/fedora
+# fi
 
 
 # Install all the packages for the OS
