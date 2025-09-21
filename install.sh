@@ -14,7 +14,6 @@ set -e
 read -p "User Name for Git (the username used to access your account; all lower case): " GITUNAME
 #read -p "Email for User Name: " GITEMAIL
 GITEMAIL=$GITUNAME@users.noreply.github.com
-read -p "What OS are you using? [Mac/Arch/Ubuntu/Fedora] " OS
 # Obviously need to make it so they cant set incorret OS. 
 # Also should make it download the folder once you select the OS probs. 
 # In order to auto detect OS, I cam use this for Mac vs Linux: From Line 505 from https://github.com/pystardust/ani-cli/blob/master/ani-cli
@@ -38,6 +37,7 @@ else
     exit 1;
 fi
 
+# read -p "What OS are you using? [Mac/Arch/Ubuntu/Fedora] " OS
 # if [ $OS  == "Fedora" ]; then
 #     OS_DIR=linux/fedora
 # fi
