@@ -1,0 +1,56 @@
+# To Dos
+- Learn about wireplumber vs pipewire etc
+- Go XLR install
+- Steam and controller support (udev rules)
+- Look at QT for brave just to see
+- Look at Steam wiki
+- Install and compare paru vs yay
+- httpie vs curlie vs postman for checking out apps
+- Need to have a backup starship config probs removing powerlines
+- confirm remove nix pm completely?
+
+
+# DE
+pacman -S sudo hyprland waybar hypridle hyprpicker hyprlock hyprpolkitagent SwayNotificationCenter xdg-desktop-portal-hyprland xdg-desktop-portal-gtk wofi wireplumber pipewire wl-clipboard flatpak gnome-themes-extra grim networkmanager notofonts noto-fonts-emoji firefox nautilus gdm adw-gtk-theme mpv ocrmypdf fcitx5-anthy wine
+
+pacman -S lsd bat fd fzf jq git-delta zoxide ripgrep cargo neovim git starship fastfetch github-cli stow zsh which alacritty openssh ghostty which man-db tldr npm nodejs wget tmux htop duf
+
+# See how I did zsh
+
+# Install Yay
+sudo pacman -S --needed git base-devel && git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si
+
+# Install Paru
+sudo pacman -S --needed git base-devel && git clone https://aur.archlinux.org/paru.git && cd paru && makepkg -si
+
+# Yay installs
+yay -S brave-bin steam-devices goxlr-utility
+
+# Dark Themes https://www.reddit.com/r/hyprland/comments/1h4abmt/comment/lzx4j8g/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button
+gsettings set org.gnome.desktop.interface gtk-theme "adw-gtk3-dark"
+
+# Need Look at dotfiles to set up neovim for packages:
+# Also need to add gh
+
+# Delta Configs
+git config --global core.pager delta
+git config --global interactive.diffFilter 'delta --color-only'
+git config --global delta.navigate true
+git config --global merge.conflictStyle zdiff3
+
+
+# Starship:
+eval "$(starship init zsh)"
+
+# Oh-My-Zsh
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
+# Install P10K without OMZ
+yay -S --noconfirm zsh-theme-powerlevel10k-git
+echo 'source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme' >>~/.zshrc
+
+
+flatpak install com.valvesoftware.Steam com.discordapp.Discord us.zoom.Zoom 
+# Anki and protonupqt
+# net.ankiweb.Anki net.davidotek.pupgui2 #(previous one is for protonup-qt)
+
