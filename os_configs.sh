@@ -50,20 +50,28 @@ pip install wheel
 pip install pynvim doq
 deactivate
 
-## Set up basic SSH template
-mkdir -p ~/.ssh
-echo """Host *
-    IgnoreUnknown UseKeychain
-    UseKeychain yes
-    AddKeysToAgent yes
+########################################
+#### Should probably Swap with Stow ####
+########################################
+# ## Set up basic SSH template
+# mkdir -p ~/.ssh
+# echo """Host *
+#     IgnoreUnknown UseKeychain
+#     UseKeychain yes
+#     AddKeysToAgent yes
+# 
+# # Host template
+# #     Hostname 192.168.1.69
+# #     Port 69420
+# #     IdentityFile ~/.ssh/id_rsa
+# 
+# """ >> ~/.ssh/config
 
-# Host template
-#     Hostname 192.168.1.69
-#     Port 69420
-#     IdentityFile ~/.ssh/id_rsa
-
-""" >> ~/.ssh/config
-
+########################################
+#### Should probably Swap with Stow ####
+########################################
+# Evaluate Zoxide for Modern CD:
+eval "$(zoxide init zsh)"
 echo 'eval "$(zoxide init zsh)"' >> ~/.zshrc
 # Exports which need to be added to my ~/.zshrc file:
 echo 'export PATH="$HOME/.cargo/bin:$PATH"' >> ~/.zshrc
