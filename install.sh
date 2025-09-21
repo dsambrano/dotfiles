@@ -93,16 +93,25 @@ source ./symlinks.sh $OS_DIR
 
 # Authorize GitHub
 ## gh auth status Logged in togithub.com as GITUNAME
-gh auth login
+read -t 30 -p "Would you like to setup GitHub right now: [y/N] ? " ghcli
+ghcli=${ghcli:-N}
+if [ $ghcli == "Y" ]; then
 
-## Setting up git repos:
-mkdir -p ~/git_repos/
-cd ~/git_repos/
-repos=(dotfiles code_samples)
-for i in "${repos[@]}"; do
-    git clone git@github.com:dsambrano/$i.git
-done
-cd -
+    # Authorize GH
+    gh auth login
+    
+
+    # Download basic repos
+    mkdir -p ~/git_repos/
+    ## Setting up git repos:
+    cd ~/git_repos/
+    repos=(dotfiles code_samples)
+    for i in "${repos[@]}"; do
+        git clone git@github.com:dsambrano/$i.git
+    done
+    cd -
+fi
+
 
 # ## Conditionals. This is where I would set up things like the GoXLR and smashbox/gaming setup etc
 read -t 5 -p "Would you like to install Anime-Terminal to download/stream anime with CLI: [y/N] ? " anime
