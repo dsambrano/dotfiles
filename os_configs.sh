@@ -90,4 +90,4 @@ echo 'export LS_COLORS="*README.md=04;31:$LS_COLORS"' >> ~/.zshrc
 # This is my personal settings for my setup. Should allow it to be more flexable in the future.
 # Use xrandr without the options to see what you displays are capable of
 # xrandr --output DP-0 --mode 1920x1080  --rate 165.00 --output DP-2 --mode 1920x1080 --rate 60 --right-of DP-0
-xrandr --output DP-2 --mode 2560x1440 --rate 180  
+# xrandr --output DP-2 --mode 2560x1440 --rate 180  
