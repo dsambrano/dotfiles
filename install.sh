@@ -27,11 +27,16 @@ if [ -f /etc/os-release ]; then
     . /etc/os-release
     echo "OS Detected: $NAME"
     OS_DIR="linux/$ID"
-    echo $OS_DIR
+    echo "Which maps to this directory: $OS_DIR"
+    echo "If this is incorrect please abort with Control-C you have 10 seconds"
+    sleep 10
 elif command -v sw_vers > /dev/null; then
     # For MacOS
     echo "OS: macOS"
     OS_DIR=mac
+    echo "Which maps to this directory: $OS_DIR"
+    echo "If this is incorrect please abort with Control-C you have 10 seconds"
+    sleep 10
 else
     echo "Unknown OS: Exciting Process"
     exit 1;
