@@ -59,6 +59,26 @@ source ./os_configs.sh $GITUNAME $GITEMAIL
 source ./$OS_DIR/os_configs.sh
 # Set up vim mode for regular terminal commands: https://koenwoortman.com/zsh-vim-mode/
 
+
+#######################################
+############### Stow ##################
+#######################################
+# stow
+# 
+    # # Symlink config files to ~/.config
+    # stow -t ~/.config config
+    # 
+    # # Symlink home files directly to ~
+    # stow -t ~ home_config
+    # 
+    # # Symlink executables to ~/.local/bin
+    # stow -t ~/.local/bin local
+
+
+
+
+
+
 # Need to add this to general path: 
 export PATH="$HOME/.cargo/bin:$PATH"
 export RIPGREP_CONFIG_PATH=$HOME/.config/ripgrep/.ripgreprc
@@ -88,8 +108,10 @@ if [ ! -d "$HOME/.local/share/nvim/site/pack/packer/start/" ]; then
 	    ~/.local/share/nvim/site/pack/packer/start/packer.nvim
 fi
 nvim --headless -c 'autocmd User PackerComplete quitall' -c 'PackerSync'
-# Sym links require the clone of the main repo first to work. 
-source ./symlinks.sh $OS_DIR
+
+###### Replaced with Stow  ######
+# # Sym links require the clone of the main repo first to work. 
+# source ./symlinks.sh $OS_DIR
 
 # Authorize GitHub
 ## gh auth status Logged in togithub.com as GITUNAME
