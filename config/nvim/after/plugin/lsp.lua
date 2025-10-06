@@ -5,7 +5,7 @@ if not ok then
 end
 
 
-lsp.preset('recommended')
+-- lsp.preset('recommended')
 -- Still need to find a way to auto install my preferred ones, but here is a start.
 -- nvim --headless -c "MasonInstall lua-language-server rust-analyzer" -c qall
 -- vim.cmd("MasonInstall black pydocstyle")
@@ -19,33 +19,55 @@ lsp.preset('recommended')
 	-- "lua_ls",
 -- })
 require('mason').setup({})
-require("mason-lspconfig").setup({
-    ensure_installed={
-	"pyright",
+local lsp_capabilities = require('cmp_nvim_lsp').default_capabilities()
+require('mason-lspconfig').setup({
+  ensure_installed = {
+    "pyright",
     -- "mypy",
     "html",
     "cssls",
-	"rust_analyzer",
-	"lua_ls"},
-})
+    "rust_analyzer",
+    "lua_ls"
+  },
+  handlers = {
+    -- ✅ Default handler (LSP Zero will call lspconfig)
+    function(server_name)
+      require('lspconfig')[server_name].setup({
+        capabilities = lsp_capabilities
+    })
+    end,
 
-lsp.configure("lua_ls", {
-    settings = {
-        Lua = {
+    -- ✅ lua_ls custom setup
+    lua_ls = function()
+      require('lspconfig').lua_ls.setup({
+        capabilities = lsp_capabilities,
+        settings = {
+          Lua = {
+            -- runtime = {
+              -- version = 'LuaJIT',  -- Neovim uses LuaJIT
+            -- },
             diagnostics = {
-                globals = { "vim", "awesome" }
-            }
-        }
-    }
-})
-lsp.use("pyright", {
-	settings = {
-		python = {
-			analysis = {
-				extraPaths = { "~/.config/nvim/env/bin/python3"},
-			}
-		}
-	}
+              globals = { "vim", "awesome" },
+            },
+          },
+        },
+      })
+    end,
+
+    -- ✅ pyright custom setup
+    pyright = function()
+      require('lspconfig').pyright.setup({
+        capabilities = lsp_capabilities,
+        settings = {
+          python = {
+            analysis = {
+              extraPaths = { "~/.config/nvim/env/bin/python3" },
+            },
+          },
+        },
+      })
+    end,
+  }
 })
 local cmp = require("cmp")
 local cmp_action = require('lsp-zero').cmp_action()
@@ -125,17 +147,19 @@ lsp.on_attach(function(client, bufnr)
       return
   end
 
-  vim.keymap.set("n", "gd", vim.lsp.buf.definition, opts)
-  vim.keymap.set("n", "gD", vim.lsp.buf.declaration, opts)
-  vim.keymap.set("n", "gr", vim.lsp.buf.references, opts)
-  vim.keymap.set("n", "K", vim.lsp.buf.hover, opts)
-  vim.keymap.set("n", "<leader>vws", vim.lsp.buf.workspace_symbol, opts)
-  vim.keymap.set("n", "<leader>vd", vim.diagnostic.open_float, opts)
-  vim.keymap.set("n", "[d", vim.diagnostic.goto_next, opts)
-  vim.keymap.set("n", "]d", vim.diagnostic.goto_prev, opts)
-  vim.keymap.set("n", "<leader>vca", vim.lsp.buf.code_action, opts)
-  vim.keymap.set("n", "<leader>vrn", vim.lsp.buf.rename, opts)
-  vim.keymap.set("i", "<C-h>", vim.lsp.buf.signature_help, opts)
+  local keymap = vim.keymap.set
+
+  keymap("n", "gd", vim.lsp.buf.definition, opts)
+  keymap("n", "gD", vim.lsp.buf.declaration, opts)
+  keymap("n", "gr", vim.lsp.buf.references, opts)
+  keymap("n", "K", vim.lsp.buf.hover, opts)
+  keymap("n", "<leader>vws", vim.lsp.buf.workspace_symbol, opts)
+  keymap("n", "<leader>vd", vim.diagnostic.open_float, opts)
+  keymap("n", "[d", vim.diagnostic.goto_next, opts)
+  keymap("n", "]d", vim.diagnostic.goto_prev, opts)
+  keymap("n", "<leader>vca", vim.lsp.buf.code_action, opts)
+  keymap("n", "<leader>vrn", vim.lsp.buf.rename, opts)
+  keymap("i", "<C-h>", vim.lsp.buf.signature_help, opts)
 end)
 
 lsp.setup()
